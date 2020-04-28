@@ -1,0 +1,97 @@
+$backgroundColor: bisque;
+$leadingBorder: 5px solid black;
+
+
+@mixin lowerLevel {
+  z-index: 1;
+}
+
+@mixin higherLever {
+  z-index: 3;
+  // background-color: $backgroundColor;
+
+  background: url(../imgs/redOcean.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pageSliderLeft-enter {
+    // @include higherLever();
+    // border-left: $leadingBorder;
+    transform: translate3d(100%, 0, 0);
+ }
+  .pageSliderLeft-enter.pageSliderLeft-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms;
+  }
+
+  .pageSliderLeft-exit {
+    // @include lowerLevel();
+    transform: translate3d(0, 0, 0);
+  }
+  .pageSliderLeft-exit.pageSliderLeft-exit-active {
+    // @include lowerLevel();
+    transform: translate3d(100%, 0, 0);
+    transition: all 1000ms;
+  }
+  
+  .pageSliderRight-enter {
+    // @include higherLever();
+    // border-right: $leadingBorder;
+    transform: translate3d(-100%, 0, 0);
+  }
+  .pageSliderRight-enter.pageSliderRight-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms;
+  }
+  .pageSliderRight-exit {
+    // @include lowerLevel();
+    transform: translate3d(0, 0, 0);
+  }
+  .pageSliderRight-exit.pageSliderRight-exit-active {
+    // @include lowerLevel();
+    transform: translate3d(-100%, 0, 0);
+    transition: all 1000ms;
+  }
+
+  .pageSliderTop-enter {
+    // @include higherLever();
+    // border-top: $leadingBorder;
+    transform: translate3d(0, 100%, 0);
+  }
+  .pageSliderTop-enter.pageSliderTop-enter-active{
+      transform: translate3d(0,0,0);
+      transition: all 1000ms;
+  }
+
+  .pageSliderTop-exit {
+    // @include lowerLevel();  
+    transform: translate3d(0,0,0);
+  }
+  .pageSliderTop-exit.pageSliderTop-exit-active {
+    // @include lowerLevel();  
+    transform: translate3d(0, 100%, 0);
+      transition: all 1000ms;
+  }
+
+.pageSliderBtm-enter {
+  // @include higherLever();
+  // border-bottom: $leadingBorder;
+    transform: translate3d(0, -100%, 0);
+}
+.pageSliderBtm-enter.pageSliderBtm-enter-active{
+    transform: translate3d(0,0,0);
+    transition: all 1000ms;
+}
+.pageSliderBtm-exit {
+  // @include lowerLevel();
+    transform: translate3d(0,0,0);
+}
+.pageSliderBtm-exit.pageSliderBtm-exit-active {
+  // @include lowerLevel();
+    transform: translate3d(0, -100%, 0);
+    transition: all 1000ms;
+}
+

@@ -1,13 +1,23 @@
 {
+  "homepage": "http://12C0DE.github.io/12codeSite",
   "name": "reactsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "node-sass": "^4.14.0",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "react-transition-group": "^4.3.0",
+    "typescript": "^3.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
