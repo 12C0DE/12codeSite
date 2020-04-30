@@ -1,0 +1,15 @@
+.Title {
+    font-family: 'Megrim', sans-serif;
+    font-size: 120px;
+    font-variant: small-caps;
+    flex-grow: 2;
+    order: 2;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 770px) {
+    .Title {
+        font-size: 60px;
+    }
+}

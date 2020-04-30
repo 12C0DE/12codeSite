@@ -1,0 +1,7 @@
+.Screen {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    background-color: bisque;
+}

@@ -1,0 +1,14 @@
+.Upright {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    height: 300px;
+    text-align: center;
+}
+
+.DivRight {
+    text-align: right;
+}
+
+a:link {
+    text-decoration: none;
+}
