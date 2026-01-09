@@ -4,7 +4,8 @@ export const LandingPage = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Main Text */}
                 <div className="mb-8">
-                    <div className="relative inline-block">
+                    {/* <div className="relative inline-block"> */}
+                    <div className="flex">
                     <h1 className="text-[10rem] md:text-[14rem] leading-none tracking-tighter text-white uppercase -ml-4">
                 PORT
                 <span className="relative inline-block">
@@ -32,6 +33,11 @@ export const LandingPage = () => {
                 </span>
                 LIO
               </h1>
+              <div className="">
+            <div className="text-8xl md:text-9xl text-white/10">
+              {new Date().getFullYear()}
+            </div>
+          </div>
                     </div>
                 </div>
                 {/* Subtitle and Year */}
