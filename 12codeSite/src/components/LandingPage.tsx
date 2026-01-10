@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ArrowDown, ChevronRight } from "lucide-react";
 
 export const LandingPage = () => {
   return (
@@ -88,12 +88,23 @@ export const LandingPage = () => {
             <h2 className="text-4xl md:text-6xl mb-6 animate-squeeze">1</h2>
             <h2 className="text-4xl md:text-6xl mb-6">2</h2>
           </span>
-          <h2 className="text-4xl md:text-4xl text-white mb-6">uben.</h2>
+          <h2 className="text-4xl md:text-4xl text-white mb-6 -ml-1">uben.</h2>
         </div>
-        <p className="text-xl text-white/60 leading-relaxed">
+        <p className="text-2xl text-white/60 leading-relaxed mb-8">
           And I built this site. I'm a software engineer working towards a
           design future.
         </p>
+        <div className="text-center justify-center mt-24">
+          <a
+            href="#projects"
+            className="group inline-flex items-center gap-3 text-white hover:text-white/70 transition-colors"
+          >
+            {/* <span className="text-lg tracking-wide">View Work</span> */}
+            <div className="size-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+              <ArrowDown className="size-6" />
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   );
