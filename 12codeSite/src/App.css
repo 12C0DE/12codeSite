@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-squeeze: squeeze 15s ease-in-out infinite;
+}
+
 /* General Styles T*/
 body {
   font-family: Arial, sans-serif;
@@ -7,6 +11,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0A0E27 ;
+  background-color: #1a1410;
   color: #fff;
+}
+
+@keyframes squeeze {
+  0%,
+  100% {
+    letter-spacing: -0.15em;
+  }
+  20%,30% {
+    letter-spacing: -0.2em;
+  }
+  40%,50%,60%,70%,80% {
+    letter-spacing: -0.25em;
+  }
 }

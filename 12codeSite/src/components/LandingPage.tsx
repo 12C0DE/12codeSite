@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 export const LandingPage = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-[#1a1410]">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto">
         {/* Main Text */}
         <div className="mb-8">
@@ -82,11 +82,18 @@ export const LandingPage = () => {
           </div>
         </div>
         {/* END of SE -> Des */}
-        <div className="max-w-4xl mb-12 flex flex-row gap-1">
-          <h2 className="text-4xl md:text-4xl text-white mb-6">I am </h2>
-          <h2 className="text-5xl md:text-6xl mb-6 animate-squeeze">12</h2>
+        <div className="max-w-4xl flex flex-row gap-1 items-baseline">
+          <h2 className="text-4xl md:text-4xl text-white mb-6">Hey, I'm </h2>
+          <span className="flex flex-row flex-nowrap gap-0 w-[56px] items-baseline">
+            <h2 className="text-4xl md:text-6xl mb-6 animate-squeeze">1</h2>
+            <h2 className="text-4xl md:text-6xl mb-6">2</h2>
+          </span>
           <h2 className="text-4xl md:text-4xl text-white mb-6">uben.</h2>
         </div>
+        <p className="text-xl text-white/60 leading-relaxed">
+          And I built this site. I'm a software engineer working towards a
+          design future.
+        </p>
       </div>
     </section>
   );
