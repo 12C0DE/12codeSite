@@ -1,6 +1,9 @@
 import { ArrowDown, ChevronRight } from "lucide-react";
+import { useScrollToElement } from "../hooks/useScrollToElement";
 
 export const LandingPage = () => {
+  const scrollToElement = useScrollToElement();
+
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto">
@@ -97,6 +100,10 @@ export const LandingPage = () => {
         <div className="text-center justify-center mt-24">
           <a
             href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToElement("projects");
+            }}
             className="group inline-flex items-center gap-3 text-white hover:text-white/70 transition-colors"
           >
             {/* <span className="text-lg tracking-wide">View Work</span> */}
