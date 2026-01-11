@@ -1,4 +1,5 @@
 import {
+  ContaactIconsGroup,
   LandingPage,
   PageContainer,
   Projects,
@@ -14,6 +15,7 @@ function App() {
         <Projects />
         <UnderConstruction />
       </PageContainer>
+      <ContaactIconsGroup />
     </div>
   );
 }
