@@ -2,6 +2,8 @@
 
 @theme {
   --animate-squeeze: squeeze 15s ease-in-out infinite;
+  --github-color: #6cc644;
+  --linkedIn-color: #0077B5;
 }
 
 /* General Styles T*/
