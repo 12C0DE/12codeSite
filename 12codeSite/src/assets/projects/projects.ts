@@ -3,13 +3,14 @@ export const projects = [
     title: "Omex",
     category: "Website",
     description:
-      "A modern banking app that simplifies personal finance management",
+      "A construction company's website displaying their craftsmanship with an easy way to contact them",
     image:
       "https://images.unsplash.com/photo-1661246627162-feb0269e0c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ24lMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY3OTY3MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["UI Design", "Prototyping", "Full App Build"],
+    tags: ["UI Design", "Prototyping", "Full App Build", "AWS Deployment"],
+    url: "https://omexconstruction.com"
   },
   {
-    title: "Analytics Dashboard",
+    title: "Chore Champ",
     category: "Web App",
     description:
       "Real-time analytics platform with intuitive data visualization",
@@ -18,15 +19,15 @@ export const projects = [
     tags: ["UX Design", "Dashboard", "B2B"],
   },
   {
-    title: "ShopLocal Platform",
-    category: "E-commerce",
+    title: "Uplift",
+    category: "Health & Wellness",
     description: "Connecting local businesses with their community online",
     image:
       "https://images.unsplash.com/photo-1677469684112-5dfb3aa4d3df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2NzkyNTQxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["Web Design", "Branding", "E-commerce"],
   },
   {
-    title: "MindfulSpace App",
+    title: "Ding Ding",
     category: "Health & Wellness",
     description: "Meditation and mindfulness companion for daily practice",
     image:
