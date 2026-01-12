@@ -5,19 +5,25 @@ import { Tooltip } from "react-tooltip";
 export const ContaactIconsGroup = () => {
   return (
     <div className="flex flex-col gap-4 fixed bottom-8 right-4">
-      <Tooltip
-        id="tooltip"
-        place="left"
-        className="bg-white text-black px-2 py-1 rounded-md text-sm"
-      />
-      <Send size={32} data-tooltip-id="emailTip" />
-      <Github size={32} />
-      <Linkedin size={32} strokeWidth={1.5} />
+      <a href="mailto:12codeHz@gmail.com">
+        <Send size={32} data-tooltip-id="emailTip" />
+      </a>
+      <a href="https://github.com/12C0DE" target="_blank">
+        <Github size={32} data-tooltip-id="ghTip" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
+        target="_blank"
+      >
+        <Linkedin size={32} strokeWidth={1.5} data-tooltip-id="linkedInTip" />
+      </a>
       <Tooltip
         id="emailTip"
         place="left"
         content="mailto: 12codeHz@gmail.com"
       />
+      <Tooltip id="ghTip" place="left" content="View GitHub Profile" />
+      <Tooltip id="linkedInTip" place="left" content="View LinkedIn Profile" />
     </div>
   );
 };
