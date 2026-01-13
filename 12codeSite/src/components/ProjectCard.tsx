@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "./ImageWithFallback";
-import { ArrowUpRight, Laptop } from "lucide-react";
+import { ArrowUpRight, Globe } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 
 interface ProjectCardProps {
@@ -51,10 +51,7 @@ export const ProjectCard = ({
                 className=""
                 data-tooltip-id={`project-${title}-tip`}
               >
-                <Laptop
-                  size={32}
-                  className="text-white/70 hover:text-blue-400"
-                />
+                <Globe size={32} className=" hover:text-blue-400" />
               </a>
               <Tooltip id={`project-${title}-tip`} place="top" content={url} />
             </>

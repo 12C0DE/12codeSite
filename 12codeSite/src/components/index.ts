@@ -1,3 +1,4 @@
+export * from "./About/index";
 export * from "./ContactIconsGroup";
 export * from "./LandingPage";
 export * from "./PageContainer";

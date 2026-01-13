@@ -20,14 +20,14 @@ export const projects = [
   {
     title: "Uplift",
     category: "Health & Wellness",
-    description: "Mobile app to track workouts",
+    description: "Mobile app to track workouts.",
     image: "https://placehold.co/600x400",
     tags: ["Mobile App", "UI Design", "Protyping"],
   },
   {
     title: "Ding Ding",
     category: "Health & Wellness",
-    description: "Meditation and mindfulness companion for daily practice",
+    description: "Meditation and mindfulness companion for daily practice.",
     image: "https://placehold.co/600x400",
     tags: ["Mobile App", "UI Design", "Protyping"],
   },
