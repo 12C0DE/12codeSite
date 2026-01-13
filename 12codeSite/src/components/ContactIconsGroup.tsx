@@ -4,8 +4,12 @@ import { Tooltip } from "react-tooltip";
 export const ContaactIconsGroup = () => {
   return (
     <div className="flex flex-col gap-4 fixed bottom-8 right-4">
-      <a href="mailto:12codeHz@gmail.com" data-tooltip-id="emailTip">
-        <Send size={32} className="hover:opacity-70" />
+      <a
+        href="mailto:12codeHz@gmail.com"
+        data-tooltip-id="emailTip"
+        className="hover:text-red-300"
+      >
+        <Send size={32} />
       </a>
       <a
         href="https://github.com/12C0DE"
