@@ -31,7 +31,7 @@ export const About = () => {
               My Life
             </h2>
             <div className="space-y-6 text-lg text-white/60 leading-relaxed">
-              <p>ds</p>
+              <p>Let me think...</p>
             </div>
           </div>
           <div className="space-y-18 lg:pt-32">
