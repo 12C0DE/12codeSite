@@ -3,35 +3,32 @@ export const projects = [
     title: "Omex",
     category: "Website",
     description:
-      "A construction company's website displaying their craftsmanship with an easy way to contact them",
-    image:
-      "https://images.unsplash.com/photo-1661246627162-feb0269e0c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ24lMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY3OTY3MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["UI Design", "Prototyping", "Full App Build", "AWS Deployment"],
-    url: "https://omexconstruction.com"
+      "This site showcases Omex’s construction expertise and portfolio, providing clients with a clear view of our craftsmanship and a simple way to contact them for project inquiries.",
+    image: "https://placehold.co/600x400",
+    tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
+    url: "https://omexconstruction.com",
   },
   {
     title: "Chore Champ",
-    category: "Web App",
+    category: "Website",
     description:
-      "Real-time analytics platform with intuitive data visualization",
-    image:
-      "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkYXNoYm9hcmQlMjBkZXNpZ258ZW58MXx8fHwxNzY3OTQyNjE0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["UX Design", "Dashboard", "B2B"],
+      "Chore Champ is a website that connects users with local help for a wide range of tasks. This app makes it easy to find reliable, nearby helpers quickly and efficiently.",
+    image: "https://placehold.co/600x400",
+    tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
+    url: "http://chore-champ-site-03.s3-website-us-east-1.amazonaws.com/",
   },
   {
     title: "Uplift",
     category: "Health & Wellness",
-    description: "Connecting local businesses with their community online",
-    image:
-      "https://images.unsplash.com/photo-1677469684112-5dfb3aa4d3df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2NzkyNTQxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Web Design", "Branding", "E-commerce"],
+    description: "Mobile app to track workouts",
+    image: "https://placehold.co/600x400",
+    tags: ["Mobile App", "UI Design", "Protyping"],
   },
   {
     title: "Ding Ding",
     category: "Health & Wellness",
     description: "Meditation and mindfulness companion for daily practice",
-    image:
-      "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMG1vY2t1cHxlbnwxfHx8fDE3Njc5NTU0NTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Mobile Design", "UI/UX", "Wellness"],
+    image: "https://placehold.co/600x400",
+    tags: ["Mobile App", "UI Design", "Protyping"],
   },
 ];
