@@ -3,17 +3,17 @@ import { Tooltip } from "react-tooltip";
 
 export const ContaactIconsGroup = () => {
   return (
-    <div className="flex flex-col gap-4 fixed bottom-8 right-4">
+    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent">
       <a
         href="mailto:12codeHz@gmail.com"
         data-tooltip-id="emailTip"
         className="hover:text-red-300"
       >
-        <Send size={32} />
+        <Send className="size-6 xl:size-8" />
       </a>
       <a
         href="https://github.com/12C0DE"
-        className="hover:text-[var(--github-color)] transition-colors"
+        className="hover:text-[var(--github-color)]"
         target="_blank"
         data-tooltip-id="ghTip"
       >
@@ -22,6 +22,7 @@ export const ContaactIconsGroup = () => {
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
+          className="size-6 xl:size-8"
         >
           <title>GitHub</title>
           <path
@@ -34,11 +35,12 @@ export const ContaactIconsGroup = () => {
         href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
         target="_blank"
         data-tooltip-id="linkedInTip"
+        className="hover:text-[var(--linkedIn-color)] transition-colors"
       >
         <Linkedin
           size={32}
           strokeWidth={1.5}
-          className="hover:text-[var(--linkedIn-color)] transition-colors"
+          className="size-6 xl:size-8"
         />
       </a>
       <Tooltip

@@ -2,8 +2,8 @@ import { ExperienceBlock } from "./ExperienceBlock";
 
 export const About = () => {
   return (
-    <section id="about" className="px-6 py-32">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="px-4 py-20">
+      <div className="max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
             <div className="flex items-center gap-6 mb-8">
@@ -22,7 +22,7 @@ export const About = () => {
                 sounds like what I'd do best at.
               </p>
               <p>
-                I believe that great design is invisible – it simply works. My
+                Great design is invisible – it simply works. My
                 goal is to create interfaces that are not only visually stunning
                 but also intuitive and accessible to all users.
               </p>
