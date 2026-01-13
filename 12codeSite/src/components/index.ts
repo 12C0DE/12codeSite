@@ -1,3 +1,5 @@
+export * from "./ContactIconsGroup";
+export * from "./LandingPage";
 export * from "./PageContainer";
-export * from './LandingPage'
+export * from "./Projects";
 export * from "./UnderConstruction";

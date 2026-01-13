@@ -1,4 +1,10 @@
-import { LandingPage, PageContainer, UnderConstruction } from "./components/index";
+import {
+  ContaactIconsGroup,
+  LandingPage,
+  PageContainer,
+  Projects,
+  UnderConstruction,
+} from "./components/index";
 import "./App.css";
 
 function App() {
@@ -6,8 +12,10 @@ function App() {
     <div className="w-full">
       <PageContainer>
         <LandingPage />
+        <Projects />
         <UnderConstruction />
       </PageContainer>
+      <ContaactIconsGroup />
     </div>
   );
 }

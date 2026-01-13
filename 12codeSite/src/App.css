@@ -2,6 +2,8 @@
 
 @theme {
   --animate-squeeze: squeeze 15s ease-in-out infinite;
+  --github-color: #6cc644;
+  --linkedIn-color: #0077b5;
 }
 
 /* General Styles T*/
@@ -20,10 +22,15 @@ body {
   100% {
     letter-spacing: -0.15em;
   }
-  20%,30% {
+  20%,
+  30% {
     letter-spacing: -0.2em;
   }
-  40%,50%,60%,70%,80% {
+  40%,
+  50%,
+  60%,
+  70%,
+  80% {
     letter-spacing: -0.25em;
   }
 }
