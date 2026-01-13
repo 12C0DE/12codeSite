@@ -34,7 +34,7 @@ export const LandingPage = () => {
           <ChevronRight
             color="#2e2f33"
             size={48}
-            className="ml-[-48px] -mr-4"
+            className="ml-[-48px] -mr-4 invisible md:visible"
           />
           <div
             className="text-sm tracking-[0.3em] uppercase"
