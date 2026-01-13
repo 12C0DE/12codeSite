@@ -3,8 +3,8 @@ import { projects } from "../assets/projects/projects";
 
 export const Projects = () => {
   return (
-    <section id="projects">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="px-4 py-20">
+      <div className="max-w-6xl">
         <div className="mb-20">
           <div className="flex items-center gap-6 mb-6">
             <div className="h-px bg-white/20 w-16"></div>
