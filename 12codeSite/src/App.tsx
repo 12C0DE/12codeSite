@@ -5,6 +5,7 @@ import {
   PageContainer,
   Projects,
   UnderConstruction,
+  // WIP,
 } from "./components/index";
 import "./App.css";
 

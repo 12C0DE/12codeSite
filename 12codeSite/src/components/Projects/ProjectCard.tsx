@@ -1,4 +1,4 @@
-import { ImageWithFallback } from "./ImageWithFallback";
+import { ImageWithFallback } from "../ImageWithFallback";
 import { ArrowUpRight, Globe } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 

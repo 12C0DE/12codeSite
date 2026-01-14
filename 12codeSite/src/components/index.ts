@@ -4,3 +4,4 @@ export * from "./LandingPage";
 export * from "./PageContainer";
 export * from "./Projects";
 export * from "./UnderConstruction";
+export * from "./WIP";
