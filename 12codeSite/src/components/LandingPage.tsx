@@ -6,7 +6,7 @@ export const LandingPage = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className=" xs:max-w-full md:max-w-6xl mx-auto">
+      <div className="xs:max-w-full md:max-w-6xl mx-auto">
         {/* Main Text */}
         <div className="mb-8 flex flex-row flex-wrap">
           <div className="flex flex-nowrap items-end">
