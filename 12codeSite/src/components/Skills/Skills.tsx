@@ -1,4 +1,4 @@
-import { ServiceCard } from "./ServiceCard"
+import { ServiceCard } from "./index"
 import { services } from '../../assets/skills/services';
 import { Heading, PageTitle } from "../Layout";
 
