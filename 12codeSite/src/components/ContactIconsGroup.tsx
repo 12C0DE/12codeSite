@@ -1,7 +1,7 @@
 import { Linkedin, Send } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 
-export const ContaactIconsGroup = () => {
+export const ContactIconsGroup = () => {
   return (
     <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent">
       <a

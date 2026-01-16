@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Gentium+Book+Plus:wght@400;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -5,11 +6,11 @@
   --github-color: #6cc644;
   --linkedIn-color: #0077b5;
   --tracking-4: 0.22em;
+  --font-hero: "Gentium Book Plus", sans-serif;
 }
 
-/* General Styles T*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arimo", Arial;
   margin: 0;
   display: flex;
   justify-content: center;

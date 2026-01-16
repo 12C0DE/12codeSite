@@ -1,4 +1,5 @@
 import { ExperienceBlock } from "./ExperienceBlock";
+import { Heading, PageTitle } from "../Layout";
 
 export const About = () => {
   return (
@@ -6,16 +7,9 @@ export const About = () => {
       <div className="max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <div className="flex items-center gap-6 mb-8">
-              <div className="h-px bg-white/20 w-16"></div>
-              <span className="text-xs text-white/50 uppercase tracking-[0.3em]">
-                About
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl text-white mb-8 tracking-tight">
-              Design Philosophy
-            </h2>
-            <div className="space-y-6 text-lg text-white/60 leading-relaxed">
+            <PageTitle title="About" />
+            <Heading text="Design Philosophy" />
+            <div className="space-y-6 mb-8 text-lg text-white/60 leading-relaxed">
               <p>
                 I'm a passionate Software Engineer who is aspiring to start a
                 career in the Design world. Ideally, a Design Engineer role
@@ -27,9 +21,7 @@ export const About = () => {
                 but also intuitive and accessible to all users.
               </p>
             </div>
-            <h2 className="text-5xl md:text-6xl text-white my-8 tracking-tight">
-              My Life
-            </h2>
+            <Heading text="My Life" />
             <div className="space-y-6 text-lg text-white/60 leading-relaxed">
               <p>Let me think...</p>
             </div>

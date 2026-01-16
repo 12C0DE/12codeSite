@@ -1,10 +1,12 @@
 import {
   About,
-  ContaactIconsGroup,
+  ContactIconsGroup,
   LandingPage,
   PageContainer,
   Projects,
+  Skills,
   UnderConstruction,
+  // WIP,
 } from "./components/index";
 import "./App.css";
 
@@ -15,9 +17,10 @@ function App() {
         <LandingPage />
         <Projects />
         <About />
+        <Skills />
         <UnderConstruction />
       </PageContainer>
-      <ContaactIconsGroup />
+      <ContactIconsGroup />
     </div>
   );
 }
