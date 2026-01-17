@@ -15,7 +15,7 @@ export const ThreeSkills = () => {
         className="relative w-full max-w-6xl h-[500px] flex items-center justify-center"
       >
         {skills.map((skill, index) => {
-          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 120; // Spread fan angle
+          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 110; // Spread fan angle
           const isHovered = hoveredCard === index;
           const isSelected = selectedCard === index;
 

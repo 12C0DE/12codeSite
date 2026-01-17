@@ -20,7 +20,8 @@ export const SkillCard = ({
         className="absolute inset-0 w-64 h-96 rounded-2xl p-6 shadow-2xl flex flex-col justify-between overflow-hidden"
         style={{
           backgroundColor: color,
-          border: `2px solid ${color === "#FFFFFF" ? "#333" : "transparent"}`,
+          // border: `2px solid ${color === "#FFFFFF" ? "#333" : "transparent"}`,
+          border: "3px solid #000",
           backfaceVisibility: "hidden",
         }}
       >
