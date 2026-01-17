@@ -1,3 +1,4 @@
+import type { SkillBreakdownProps } from "../../types";
 import { getYears } from "../../utils";
 
 export const skills = [
@@ -10,6 +11,7 @@ export const skills = [
     use: "Moodboards, Design, Prototyping",
     years: getYears(2023),
     type: "Design Tool",
+    cardIndex: 0,
   },
   {
     name: "AWS",
@@ -21,6 +23,7 @@ export const skills = [
     use: "Serverless Lambdas, APIs, DynamoDB, s3, SES",
     years: getYears(2021),
     type: "Cloud Computing",
+    cardIndex: 1,
   },
   {
     name: "Databases",
@@ -31,6 +34,7 @@ export const skills = [
     use: "SQL, PL/SQL, MySQL, DynamoDB, MongoDB",
     years: getYears(2017),
     type: "Data Storage",
+    cardIndex: 2,
   },
   {
     name: ".NET",
@@ -41,6 +45,7 @@ export const skills = [
     use: "C#, ASP.NET, Web APIs, Backend Services",
     years: getYears(2022),
     type: "Framework",
+    cardIndex: 3,
   },
   {
     name: "Full-Stack JavaScript",
@@ -51,6 +56,7 @@ export const skills = [
     use: "Frontend, Backend (Node.js), APIs, TypeScript",
     years: getYears(2019),
     type: "Programming Language",
+    cardIndex: 4,
   },
   {
     name: "React",
@@ -61,16 +67,6 @@ export const skills = [
     years: getYears(2018),
     type: "Software",
     icon: "react",
+    cardIndex: 5,
   },
 ];
-
-// - React
-// - React Native
-//     - expo go
-// - SQL
-// - NoSQL
-// - AWS
-// - Figma
-// - Javascript
-// - Typescript
-// - .Net

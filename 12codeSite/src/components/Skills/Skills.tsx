@@ -20,7 +20,7 @@ export const Skills = () => {
           ))}
         </div>
         <div className="mt-24">
-          <h3 className="text-3xl text-white mb-8 text-center tracking-tight">
+          <h3 className="text-3xl text-white mb-2 text-center tracking-tight">
             Tools & Technologies
           </h3>
           {/* <p className="text-center text-white/50 mb-8">

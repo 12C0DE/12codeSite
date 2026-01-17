@@ -9,11 +9,10 @@ export const ThreeSkills = () => {
     null,
   );
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
   const totalCards = skills.length;
 
   return (
-    <div className="relative w-full min-h-[700px] flex items-center justify-center py-16">
+    <div className="relative w-full min-h-[700px] flex items-center justify-center py-8">
       <div
         id="fan"
         className="relative w-full max-w-6xl h-[500px] flex items-center justify-center"
@@ -21,20 +20,22 @@ export const ThreeSkills = () => {
         {skills.map((skill, index) => {
           const angle = ((index - (totalCards - 1) / 2) / totalCards) * 60; // Spread angle
           const isHovered = hoveredCard === index;
+          const isSelected = selectedCard?.cardIndex === index;
 
           return (
             <motion.div
               key={skill.name}
               className="absolute cursor-pointer"
               style={{
-                zIndex: selectedCard ? 100 : isHovered ? 50 : index,
+                zIndex: isSelected ? 100 : isHovered ? 50 : index,
+                perspective: "1000px",
               }}
               initial={false}
               animate={{
-                rotate: selectedCard ? 0 : angle,
-                y: selectedCard ? -50 : 0,
-                scale: selectedCard ? 1.15 : isHovered ? 1.05 : 1,
-                x: selectedCard ? 0 : angle * 8,
+                rotate: isSelected ? 0 : angle,
+                y: isSelected ? -50 : 0,
+                scale: isSelected ? 1.3 : isHovered ? 1.05 : 1,
+                x: isSelected ? 0 : angle * 8,
               }}
               transition={{
                 type: "spring",
@@ -43,9 +44,19 @@ export const ThreeSkills = () => {
               }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
-              onClick={() => setSelectedCard(selectedCard ? null : skill)}
+              onClick={() => setSelectedCard(isSelected ? null : skill)}
             >
-              <SkillCard {...skill} />
+              <motion.div
+                className="relative w-64 h-96"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ rotateY: isSelected ? 180 : 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeInOut",
+                }}
+              >
+                <SkillCard close={() => setSelectedCard(null)} {...skill} />
+              </motion.div>
               {isHovered && !selectedCard && (
                 <motion.div
                   className="absolute inset-0 border-4 rounded-2xl pointer-events-none"
@@ -59,11 +70,11 @@ export const ThreeSkills = () => {
         })}
       </div>
       {/*  MODAL */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {selectedCard !== null && (
           <SkillModal close={() => setSelectedCard(null)} {...selectedCard} />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       {selectedCard === null && (
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
           <p className="text-white/40 text-sm">

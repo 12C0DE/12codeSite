@@ -8,5 +8,6 @@ export interface SkillBreakdownProps {
   desc: string;
   icon: string;
   type: string;
+  cardIndex?: number;
   close?: () => void;
 }
