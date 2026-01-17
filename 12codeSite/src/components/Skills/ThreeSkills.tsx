@@ -4,7 +4,7 @@ import { SkillCard, SkillModal } from "./index";
 import { skills } from "../../assets/skills";
 import type { SkillBreakdownProps } from "../../types";
 
-export const ThreeSkills = ({}) => {
+export const ThreeSkills = () => {
   const [selectedCard, setSelectedCard] = useState<SkillBreakdownProps | null>(
     null,
   );

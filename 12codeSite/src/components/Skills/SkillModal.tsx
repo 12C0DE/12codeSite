@@ -1,10 +1,11 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { getIcon } from "../../utils";
 import type { SkillBreakdownProps } from "../../types";
 
 export const SkillModal = ({
   name,
   color,
+  accentColor,
   experience,
   use,
   years,
@@ -53,7 +54,7 @@ export const SkillModal = ({
                   style={{
                     backgroundColor:
                       experience >= index + 1
-                        ? color
+                        ? (accentColor ?? color)
                         : "rgba(255, 255, 255, 0.1)",
                   }}
                 />

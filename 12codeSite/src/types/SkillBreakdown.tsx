@@ -1,6 +1,7 @@
 export interface SkillBreakdownProps {
   name: string;
   color: string;
+  accentColor?: string;
   experience: number;
   use: string;
   years: number;
