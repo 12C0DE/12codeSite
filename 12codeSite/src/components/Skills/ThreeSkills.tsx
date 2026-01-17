@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { SkillCard, SkillModal } from "./index";
+import { motion } from "motion/react";
+import { SkillCard } from "./index";
 import { skills } from "../../assets/skills";
-import type { SkillBreakdownProps } from "../../types";
 
 export const ThreeSkills = () => {
-  const [selectedCard, setSelectedCard] = useState<SkillBreakdownProps | null>(
-    null,
-  );
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const totalCards = skills.length;
 
@@ -18,9 +15,9 @@ export const ThreeSkills = () => {
         className="relative w-full max-w-6xl h-[500px] flex items-center justify-center"
       >
         {skills.map((skill, index) => {
-          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 60; // Spread angle
+          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 120; // Spread fan angle
           const isHovered = hoveredCard === index;
-          const isSelected = selectedCard?.cardIndex === index;
+          const isSelected = selectedCard === index;
 
           return (
             <motion.div
@@ -44,7 +41,7 @@ export const ThreeSkills = () => {
               }}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
-              onClick={() => setSelectedCard(isSelected ? null : skill)}
+              onClick={() => setSelectedCard(isSelected ? null : index)}
             >
               <motion.div
                 className="relative w-64 h-96"
@@ -55,7 +52,11 @@ export const ThreeSkills = () => {
                   ease: "easeInOut",
                 }}
               >
-                <SkillCard close={() => setSelectedCard(null)} {...skill} />
+                <SkillCard
+                  close={() => setSelectedCard(null)}
+                  isSelected={isSelected}
+                  {...skill}
+                />
               </motion.div>
               {isHovered && !selectedCard && (
                 <motion.div
@@ -69,12 +70,6 @@ export const ThreeSkills = () => {
           );
         })}
       </div>
-      {/*  MODAL */}
-      {/* <AnimatePresence>
-        {selectedCard !== null && (
-          <SkillModal close={() => setSelectedCard(null)} {...selectedCard} />
-        )}
-      </AnimatePresence> */}
       {selectedCard === null && (
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
           <p className="text-white/40 text-sm">

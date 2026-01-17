@@ -1,4 +1,3 @@
-import type { SkillBreakdownProps } from "../../types";
 import { getYears } from "../../utils";
 
 export const skills = [
@@ -43,7 +42,7 @@ export const skills = [
     icon: "dotnet",
     experience: 3,
     use: "C#, ASP.NET, Web APIs, Backend Services",
-    years: getYears(2022),
+    years: getYears(2018),
     type: "Framework",
     cardIndex: 3,
   },

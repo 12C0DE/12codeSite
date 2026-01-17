@@ -4,10 +4,15 @@ import type { SkillBreakdownProps } from "../../types";
 export const SkillCard = ({
   name,
   color,
+  accentColor,
   icon,
+  experience,
   desc,
+  use,
   type,
-  close,
+  years,
+  close = () => {}, // Add default here
+  isSelected,
 }: SkillBreakdownProps) => {
   return (
     <>
@@ -19,17 +24,13 @@ export const SkillCard = ({
           backfaceVisibility: "hidden",
         }}
       >
-        {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)`,
           }}
         />
-
-        {/* Content */}
         <div className="relative z-10">
-          {/* Icon/Logo Area */}
           <div className="flex items-center justify-center mb-6">
             <div
               className="w-32 h-32 rounded-full flex items-center justify-center text-6xl"
@@ -41,8 +42,6 @@ export const SkillCard = ({
               {getIcon(icon)}
             </div>
           </div>
-
-          {/* Decorative elements */}
           <div className="flex gap-2 mb-4">
             <div
               className="w-12 h-12 rounded-lg"
@@ -57,8 +56,6 @@ export const SkillCard = ({
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
             />
           </div>
-
-          {/* Text info */}
           <div className="space-y-1">
             <div
               className="h-2 w-32 rounded"
@@ -74,8 +71,6 @@ export const SkillCard = ({
             />
           </div>
         </div>
-
-        {/* Card Footer */}
         <div className="relative z-10">
           <h3
             className="text-2xl mb-1"
@@ -95,18 +90,7 @@ export const SkillCard = ({
             Design Tool
           </p>
         </div>
-
-        {/* Hover indicator */}
-        {/* {isHovered && !isSelected && (
-                    <motion.div
-                      className="absolute inset-0 border-4 rounded-2xl pointer-events-none"
-                      style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                    />
-                  )} */}
       </div>
-
       <div
         id="backofCard"
         className="absolute inset-0 w-64 h-96 rounded-2xl p-6 shadow-2xl flex flex-col justify-between overflow-hidden"
@@ -115,22 +99,20 @@ export const SkillCard = ({
           border: "2px solid rgba(255, 255, 255, 0.1)",
           backfaceVisibility: "hidden",
           transform: "rotateY(180deg)",
+          pointerEvents: isSelected ? "auto" : "none", // Add this
         }}
       >
         <div className="relative z-10">
-          <div className="flex items-start gap-4 mb-6">
+          <article className="mb-6">
             <div
-              className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+              className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 float-left mr-2"
               style={{ backgroundColor: color }}
             >
-              {icon}
+              {getIcon(icon)}
             </div>
-            <div className="flex-1">
-              <h3 className="text-xl text-white mb-1">{name}</h3>
-              <p className="text-white/60 text-xs">{desc}</p>
-            </div>
-          </div>
-
+            <h3 className="text-xl text-white mb-1">{name}</h3>
+            <p className="text-white/60 text-xs">{desc}</p>
+          </article>
           <div className="space-y-4">
             <div>
               <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
@@ -143,7 +125,9 @@ export const SkillCard = ({
                     className="h-2 flex-1 rounded-full"
                     style={{
                       backgroundColor:
-                        level <= 4 ? color : "rgba(255, 255, 255, 0.1)",
+                        experience >= level
+                          ? (accentColor ?? color)
+                          : "rgba(255, 255, 255, 0.1)",
                     }}
                   />
                 ))}
@@ -154,16 +138,16 @@ export const SkillCard = ({
               <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
                 Primary Use
               </h4>
-              <p className="text-white/80 text-sm">
-                UI/UX Design, Prototyping, User Research
-              </p>
+              <p className="text-white/80 text-sm">{use}</p>
             </div>
 
             <div>
               <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
                 Years Using
               </h4>
-              <p className="text-white/80 text-sm">3+ years</p>
+              <p className="text-white/80 text-sm">
+                <b>{years}</b>
+              </p>
             </div>
           </div>
         </div>
@@ -171,12 +155,10 @@ export const SkillCard = ({
         <button
           onClick={(e) => {
             e.stopPropagation();
-            close;
-            // setSelectedCard(null);
+            close();
           }}
-          className="relative z-10 w-full py-3 rounded-lg text-white text-sm transition-colors"
+          className="relative z-10 w-full py-3 rounded-lg text-white text-sm transition-colors underline underline-offset-4 hover:text-blue-400"
           style={{
-            backgroundColor: color,
             color: color === "#FFFFFF" ? "#000" : "#fff",
           }}
         >
