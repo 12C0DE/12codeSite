@@ -2,21 +2,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SkillCard, SkillModal } from "./index";
 import { skills } from "../../assets/skills";
-
-interface SkillBreakdownProps {
-  name: string;
-  color: string;
-  experience: number;
-  use: string;
-  years: number;
-  desc: string;
-  icon: string;
-  type: string;
-}
+import type { SkillBreakdownProps } from "../../types";
 
 export const ThreeSkills = ({}) => {
   const [selectedCard, setSelectedCard] = useState<SkillBreakdownProps | null>(
-    null
+    null,
   );
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -56,19 +46,18 @@ export const ThreeSkills = ({}) => {
               onClick={() => setSelectedCard(selectedCard ? null : skill)}
             >
               <SkillCard {...skill} />
-                {isHovered && !selectedCard && (
-                  <motion.div
-                    className="absolute inset-0 border-4 rounded-2xl pointer-events-none"
-                    style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                  />
-                )}
+              {isHovered && !selectedCard && (
+                <motion.div
+                  className="absolute inset-0 border-4 rounded-2xl pointer-events-none"
+                  style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                />
+              )}
             </motion.div>
           );
         })}
       </div>
-
       {/*  MODAL */}
       <AnimatePresence>
         {selectedCard !== null && (

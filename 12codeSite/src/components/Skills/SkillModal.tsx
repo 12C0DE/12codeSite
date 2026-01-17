@@ -1,15 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
-
-interface SkillBreakdownProps {
-  name: string;
-  color: string;
-  experience: number;
-  use: string;
-  years: number;
-  desc: string;
-  icon: string;
-  close: () => void;
-}
+import { getIcon } from "../../utils";
+import type { SkillBreakdownProps } from "../../types";
 
 export const SkillModal = ({
   name,
@@ -42,7 +33,7 @@ export const SkillModal = ({
             className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
             style={{ backgroundColor: color }}
           >
-            {icon}
+            {getIcon(icon)}
           </div>
           <div className="flex-1">
             <h3 className="text-2xl text-white mb-1">{name}</h3>
