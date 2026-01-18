@@ -11,7 +11,7 @@ export const SkillCard = ({
   use,
   type,
   years,
-  close = () => {},
+  // close = () => {},
   isSelected,
   isMobile,
 }: SkillBreakdownProps) => {
