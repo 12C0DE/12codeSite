@@ -23,6 +23,8 @@ export const SkillCard = ({
           backgroundColor: color,
           border: "3px solid #000",
           backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden", //Safari
+          transform: "rotateY(0deg)",
         }}
       >
         <div
@@ -102,8 +104,9 @@ export const SkillCard = ({
           backgroundColor: "#1a1a1a",
           border: "2px solid rgba(255, 255, 255, 0.1)",
           backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden", //Safari
           transform: "rotateY(180deg) translateZ(0)",
-          pointerEvents: isSelected ? "auto" : "none", // Add this
+          pointerEvents: isSelected ? "auto" : "none",
           WebkitFontSmoothing: "antialiased",
           fontSmooth: "always",
           textRendering: "optimizeLegibility",
