@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { SkillCard } from "./index";
 import { skills } from "../../assets/skills";
@@ -6,8 +6,75 @@ import { skills } from "../../assets/skills";
 export const ThreeSkills = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const totalCards = skills.length;
 
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className="w-full py-12 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 max-x-xl mx-auto">
+          {skills.map((skill, index) => {
+            const isSelected = selectedCard === index;
+            return (
+              <motion.div
+                key={skill.name}
+                className="cursor-pointer"
+                style={{
+                  perspective: "1000px",
+                  zIndex: isSelected ? 100 : index,
+                }}
+                initial={false}
+                animate={{
+                  scale: isSelected ? 1.5 : 1,
+                  x: isSelected ? (index % 2 == 0 ? 50 : -25) : 0,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                }}
+                onClick={() => setSelectedCard(isSelected ? null : index)}
+              >
+                <motion.div
+                  className="relative w-full h-fit aspect-[2/3]"
+                  style={{ transformStyle: "preserve-3d" }}
+                  animate={{ rotateY: isSelected ? 180 : 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <SkillCard
+                    close={() => setSelectedCard(null)}
+                    isSelected={isSelected}
+                    isMobile={true}
+                    {...skill}
+                  />
+                </motion.div>
+              </motion.div>
+            );
+          })}
+        </div>
+        {selectedCard === null && (
+          <div className="text-center px-4 mt-4">
+            <p className="text-white/40 text-sm">
+              Swipe to explore • Tap to view details
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  }
+  // Desktop version
   return (
     <div className="relative w-full min-h-[700px] flex items-center justify-center py-8">
       <div
@@ -55,6 +122,7 @@ export const ThreeSkills = () => {
                 <SkillCard
                   close={() => setSelectedCard(null)}
                   isSelected={isSelected}
+                  isMobile={false}
                   {...skill}
                 />
               </motion.div>

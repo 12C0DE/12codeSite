@@ -11,30 +11,31 @@ export const SkillCard = ({
   use,
   type,
   years,
-  close = () => {}, // Add default here
+  close = () => {},
   isSelected,
+  isMobile,
 }: SkillBreakdownProps) => {
   return (
     <>
       <div
-        className="absolute inset-0 w-64 h-96 rounded-2xl p-6 shadow-2xl flex flex-col justify-between overflow-hidden"
+        className="absolute inset-0 rounded-xl p-4 shadow-xl flex flex-col justify-between overflow-hidden md:h-auto"
         style={{
           backgroundColor: color,
-          // border: `2px solid ${color === "#FFFFFF" ? "#333" : "transparent"}`,
           border: "3px solid #000",
           backfaceVisibility: "hidden",
         }}
       >
         <div
+          id="backgroundPattern"
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)`,
           }}
         />
-        <div className="relative z-10">
-          <div className="flex items-center justify-center mb-6">
+        <div id="content" className="relative z-10">
+          <div className="flex items-center justify-center mb-2">
             <div
-              className="w-32 h-32 rounded-full flex items-center justify-center text-6xl"
+              className="w-18 h-18 lg:w-32 lg:h-32 rounded-full flex items-center justify-center text-4xl lg:text-6xl"
               style={{
                 backgroundColor: "rgba(0, 0, 0, 0.2)",
                 color: color === "#FFFFFF" ? "#000" : "#fff",
@@ -57,24 +58,26 @@ export const SkillCard = ({
               style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
             />
           </div>
-          <div className="space-y-1">
-            <div
-              className="h-2 w-32 rounded"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-            />
-            <div
-              className="h-2 w-24 rounded"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
-            />
-            <div
-              className="h-2 w-28 rounded"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
-            />
-          </div>
+          {!isMobile && (
+            <div className="space-y-1">
+              <div
+                className="h-2 w-32 rounded"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+              />
+              <div
+                className="h-2 w-24 rounded"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
+              />
+              <div
+                className="h-2 w-28 rounded"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
+              />
+            </div>
+          )}
         </div>
-        <div className="relative z-10">
+        <div id="cardFooter" className="relative z-10">
           <h3
-            className="text-2xl mb-1"
+            className="text-xl lg:text-2xl mb-1"
             style={{
               color: color === "#FFFFFF" ? "#000" : "#fff",
               fontWeight: 600,
@@ -88,35 +91,40 @@ export const SkillCard = ({
               color: color === "#FFFFFF" ? "#666" : "rgba(255,255,255,0.8)",
             }}
           >
-            Design Tool
+            {type}
           </p>
         </div>
       </div>
       <div
         id="backofCard"
-        className="absolute inset-0 w-64 h-96 rounded-2xl p-6 shadow-2xl flex flex-col justify-between overflow-hidden"
+        className="absolute inset-0 rounded-xl p-3 shadow-xl flex flex-col justify-between lg:content-between overflow-hidden "
         style={{
           backgroundColor: "#1a1a1a",
           border: "2px solid rgba(255, 255, 255, 0.1)",
           backfaceVisibility: "hidden",
-          transform: "rotateY(180deg)",
+          transform: "rotateY(180deg) translateZ(0)",
           pointerEvents: isSelected ? "auto" : "none", // Add this
+          WebkitFontSmoothing: "antialiased",
+          fontSmooth: "always",
+          textRendering: "optimizeLegibility",
         }}
       >
         <div className="relative z-10">
-          <article className="mb-6">
+          <article className="mb-2">
             <div
-              className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 float-left mr-2"
+              className="w-14 h-14 lg:w-20 lg:h-20 lg:mr-4 -ml-2 rounded-full flex items-center justify-center text-2xl lg:text-6xl float-left mr-1"
               style={{ backgroundColor: color }}
             >
               {getIcon(icon)}
             </div>
-            <h3 className="text-xl text-white mb-1">{name}</h3>
-            <p className="text-white/60 text-xs">{desc}</p>
+            <h3 className="invisible md: visible text-md lg:text-xl text-white mb-1 font-bold">
+              {name}
+            </h3>
+            <p className="text-white/60 text-[10px] md:text-sm">{desc}</p>
           </article>
-          <div className="space-y-4">
+          <div className="space-y-3 lg:space-y-4">
             <div>
-              <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wider mb-1 md:mb-2 lg:mt-4">
                 Experience Level
               </h4>
               <div className="flex gap-1">
@@ -136,14 +144,14 @@ export const SkillCard = ({
             </div>
 
             <div>
-              <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wider mb-1 md:mb-2">
                 Primary Use
               </h4>
-              <p className="text-white/80 text-sm">{use}</p>
+              <p className="text-white/80 text-[10px] md:text-sm">{use}</p>
             </div>
 
             <div>
-              <h4 className="text-white/40 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wide mb-1 md:mb-2">
                 Years Using
               </h4>
               <p className="text-white/80 text-sm">
@@ -152,19 +160,6 @@ export const SkillCard = ({
             </div>
           </div>
         </div>
-
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            close();
-          }}
-          className="relative z-10 w-full py-3 rounded-lg text-white text-sm transition-colors underline underline-offset-4 hover:text-blue-400"
-          style={{
-            color: color === "#FFFFFF" ? "#000" : "#fff",
-          }}
-        >
-          Close
-        </button>
       </div>
     </>
   );

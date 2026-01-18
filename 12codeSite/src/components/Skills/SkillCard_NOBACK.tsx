@@ -11,6 +11,7 @@ export const SkillCard = ({ name, color, icon, type }: SkillBreakdownProps) => {
         backfaceVisibility: "hidden",
       }}
     >
+      <h1>NO BACK</h1>
       <div
         className="absolute inset-0 opacity-10"
         style={{

@@ -11,4 +11,5 @@ export interface SkillBreakdownProps {
   isSelected?: boolean;
   cardIndex?: number;
   close?: () => void;
+  isMobile?: boolean;
 }
