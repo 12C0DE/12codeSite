@@ -1,4 +1,4 @@
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "./index";
 import { projects } from "../../assets/projects/projects";
 import { Heading, PageTitle } from "../Layout";
 
