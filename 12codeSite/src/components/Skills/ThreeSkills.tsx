@@ -21,7 +21,7 @@ export const ThreeSkills = () => {
   if (isMobile) {
     return (
       <div className="w-full py-12 px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 max-x-xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 max-w-xl mx-auto">
           {skills.map((skill, index) => {
             const isSelected = selectedCard === index;
             return (
@@ -82,7 +82,7 @@ export const ThreeSkills = () => {
         className="relative w-full max-w-6xl h-[500px] flex items-center justify-center"
       >
         {skills.map((skill, index) => {
-          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 110; // Spread fan angle
+          const angle = ((index - (totalCards - 1) / 2) / totalCards) * 100; // Spread fan angle
           const isHovered = hoveredCard === index;
           const isSelected = selectedCard === index;
 
@@ -99,7 +99,7 @@ export const ThreeSkills = () => {
                 rotate: isSelected ? 0 : angle,
                 y: isSelected ? -50 : 0,
                 scale: isSelected ? 1.3 : isHovered ? 1.05 : 1,
-                x: isSelected ? 0 : angle * 8,
+                x: isSelected ? 0 : angle * 7,
               }}
               transition={{
                 type: "spring",
