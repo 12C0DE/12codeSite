@@ -29,9 +29,6 @@ export const ProjectCard = ({
         <div className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-45">
           <ArrowUpRight className="size-6 text-white" />
         </div>
-        <div className="absolute bottom-6 left-6 text-white/50 text-6xl font-light">
-          0{index + 1}
-        </div>
       </div>
       <div className="space-y-3">
         <div className="flex items-center gap-3">
