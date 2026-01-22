@@ -18,7 +18,6 @@ export const ProjectCard = ({
   description,
   image,
   tags,
-  index,
   url,
 }: ProjectCardProps) => {
   return (
