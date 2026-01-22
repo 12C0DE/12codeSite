@@ -8,9 +8,10 @@
 //   UnderConstruction,
 //   // WIP,
 // } from "./components/index";
-import { Home, Project } from "./pages/index";
+import { Home, NotFound, Project } from "./pages/index";
 import { ClarityPageTracker } from "./components/index";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ProjectProvider } from "./context/ProjectContext";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useClarity } from "./hooks/useClarity";
 import "./App.css";
 
@@ -19,20 +20,16 @@ function App() {
 
   return (
     <div className="w-full">
-      {/* <PageContainer>
-        <LandingPage />
-        <Projects />
-        <About />
-        <Skills />
-        <UnderConstruction />
-      </PageContainer>
-      <ContactIconsGroup /> */}
       <BrowserRouter>
-        <ClarityPageTracker />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Project />} />
-        </Routes>
+        <ProjectProvider>
+          <ClarityPageTracker />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/notfound" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/notfound" replace />} />
+          </Routes>
+        </ProjectProvider>
       </BrowserRouter>
     </div>
   );

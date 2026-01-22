@@ -1,6 +1,9 @@
 import { ImageWithFallback } from "./index";
 import { ArrowUpRight, Globe } from "lucide-react";
 import { Tooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
+import { useProject } from "../../context/useProject";
+// import type { Project } from "../../context/ProjectTypes";
 
 interface ProjectCardProps {
   title: string;
@@ -18,20 +21,40 @@ export const ProjectCard = ({
   description,
   image,
   tags,
-  index,
   url,
 }: ProjectCardProps) => {
+  const navigate = useNavigate();
+  const { setSelectedProject } = useProject();
+
+  const handleViewProject = () => {
+    setSelectedProject({
+      title,
+      category,
+      description,
+      image,
+      tags,
+      url,
+    });
+    navigate("/project");
+  };
+
   return (
     <div className="group cursor-pointer">
-      <div className="relative overflow-hidden rounded-sm mb-6 aspect-[4/3] bg-zinc-900">
+      <div className="relative overflow-hidden rounded-sm mb-6 aspect-4/3 bg-zinc-900">
         <ImageWithFallback src={image} alt={title} />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
-        <div className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-45">
+        <div
+          className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-45"
+          onClick={handleViewProject}
+          data-tooltip-id={`project-view-${title}-tip`}
+        >
           <ArrowUpRight className="size-6 text-white" />
         </div>
-        <div className="absolute bottom-6 left-6 text-white/50 text-6xl font-light">
-          0{index + 1}
-        </div>
+        <Tooltip
+          id={`project-view-${title}-tip`}
+          place="left"
+          content="See more"
+        />
       </div>
       <div className="space-y-3">
         <div className="flex items-center gap-3">
