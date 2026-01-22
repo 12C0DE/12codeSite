@@ -2,25 +2,25 @@ export const services = [
   {
     icon: "Users",
     title: "UX Research",
-    desc: "Understanding user needs through research, testing, and data analysis",
+    desc: "I'll find your users. Find what their ‘good’ looks like. Then figure out how to get them to love your product.",
     effectType: "ux-research",
   },
   {
     icon: "Layout",
     title: "UI Design",
-    desc: "Creating beautiful and functional user interfaces with attention to every detail",
+    desc: "We have 5 seconds to make a good 1st impression. Let's make it count with stunning, user-friendly designs.",
     effectType: "ui-design",
   },
   {
     icon: "Sparkles",
     title: "Prototyping",
-    desc: "Bringing ideas to life with interactive prototypes and animations",
+    desc: "My creativity + your creativity lead to this. Here we explore possibilities, iterate, & decide together what really works.",
     effectType: "prototyping",
   },
   {
     icon: "Code",
     title: "Build Software",
-    desc: "Developing high-quality software solutions tailored to your business needs",
+    desc: "Concept ✅ Research ✅ Planning ✅ Sit back & relax while I build your idea.",
     effectType: "build-software",
   },
 ];
