@@ -8,7 +8,7 @@ export function useScrollToElement() {
    * @param smooth - Whether to enable smooth scrolling (default = true)
    */
   const scrollToElement = useCallback(
-    (id: string, offset: number = 42, smooth: boolean = true) => {
+    (id: string, offset: number = -64, smooth: boolean = true) => {
       const element = document.getElementById(id);
       if (!element) return;
 
@@ -21,7 +21,7 @@ export function useScrollToElement() {
         behavior: smooth ? "smooth" : "auto",
       });
     },
-    []
+    [],
   );
 
   return scrollToElement;
