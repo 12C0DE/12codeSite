@@ -1,34 +1,127 @@
-export const projects = [
+import type { ProjectData } from "../../types/ProjectData";
+
+export const projects: ProjectData[] = [
   {
+    id: "omex",
     title: "Omex",
     category: "Website",
     description:
-      "This site showcases Omex’s construction expertise and portfolio, providing clients with a clear view of our craftsmanship and a simple way to contact them for project inquiries.",
-    image: "https://placehold.co/600x400",
+      "This site showcases Omex's construction expertise and portfolio, providing clients with a clear view of our craftsmanship and a simple way to contact them for project inquiries.",
+    detailedDescription:
+      "A comprehensive website for Omex Construction that highlights their portfolio of completed projects, showcases their construction expertise, and provides an easy way for potential clients to get in touch for project inquiries and consultations.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
-    url: "https://omexconstruction.com",
+    role: "Full Stack Developer & UI/UX Designer",
+    team: ["Ruben Hernandez", "Design Partner"],
+    timeline: "3 months",
+    links: [
+      { label: "Live Site", url: "https://omexconstruction.com" },
+      { label: "GitHub", url: "https://github.com" },
+    ],
+    mainImage: "https://placehold.co/600x400",
+    images: [
+      { url: "https://placehold.co/800x600", caption: "Homepage design" },
+      { url: "https://placehold.co/800x600", caption: "Portfolio section" },
+      { url: "https://placehold.co/800x600", caption: "Portfolio section" },
+    ],
+    challenges:
+      "Creating a responsive design that works across all devices while showcasing high-quality project imagery and making it easy for clients to request quotes.",
+    solution:
+      "Implemented a modern, mobile-first design with optimized image loading and a streamlined contact form integrated with AWS services for reliable lead management.",
+    impact:
+      "Increased client inquiries by 45% and improved site engagement metrics by 60% within the first quarter of launch.",
   },
   {
+    id: "chore-champ",
     title: "Chore Champ",
     category: "Website",
     description:
       "Chore Champ is a website that connects users with local help for a wide range of tasks. This app makes it easy to find reliable, nearby helpers quickly and efficiently.",
-    image: "https://placehold.co/600x400",
+    detailedDescription:
+      "Chore Champ is a platform that bridges the gap between people needing help with household tasks and service providers looking for work. The platform features real-time matching, secure payments, and user reviews to ensure quality service.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
-    url: "http://chore-champ-site-03.s3-website-us-east-1.amazonaws.com/",
+    role: "Frontend Developer & Lead Designer",
+    team: ["Ruben Hernandez", "Backend Developer", "Project Manager"],
+    timeline: "4 months",
+    links: [
+      {
+        label: "Live Site",
+        url: "http://chore-champ-site-03.s3-website-us-east-1.amazonaws.com/",
+      },
+      { label: "GitHub", url: "https://github.com" },
+    ],
+    mainImage: "https://placehold.co/600x400",
+    images: [
+      { url: "https://placehold.co/800x600", caption: "Service listing page" },
+      {
+        url: "https://placehold.co/800x600",
+        caption: "Task booking interface",
+      },
+    ],
+    challenges:
+      "Building a user-friendly interface that caters to both service seekers and providers, managing real-time data, and ensuring trust through reviews and secure payments.",
+    solution:
+      "Created an intuitive two-sided marketplace with real-time notifications, integrated payment processing, and a robust review system to build trust and encourage repeat usage.",
+    impact:
+      "Launched with 500+ active users in the first month and facilitated over 1,000 task completions within the first year.",
   },
   {
+    id: "uplift",
     title: "Uplift",
     category: "Health & Wellness",
     description: "Mobile app to track workouts.",
-    image: "https://placehold.co/600x400",
-    tags: ["Mobile App", "UI Design", "Protyping"],
+    detailedDescription:
+      "Uplift is a mobile fitness tracking application that helps users monitor their workout progress, set fitness goals, and track various exercise types with detailed analytics and progress charts.",
+    tags: ["Mobile App", "UI Design", "Prototyping"],
+    role: "UI/UX Designer & Mobile Developer",
+    team: ["Ruben Hernandez", "Fitness Consultant"],
+    timeline: "2 months",
+    links: [
+      { label: "GitHub", url: "https://github.com" },
+      { label: "Figma Design", url: "https://figma.com" },
+    ],
+    mainImage: "https://placehold.co/600x400",
+    images: [
+      { url: "https://placehold.co/800x600", caption: "Workout dashboard" },
+      { url: "https://placehold.co/800x600", caption: "Progress analytics" },
+    ],
+    challenges:
+      "Designing an intuitive interface for tracking multiple workout types while presenting data in a visually appealing and easy-to-understand format.",
+    solution:
+      "Developed a clean, minimalist design with customizable workout categories, interactive charts, and motivational progress indicators to keep users engaged.",
+    impact:
+      "Created a prototype that received positive feedback from fitness enthusiasts and served as a foundation for future development.",
   },
   {
+    id: "ding-ding",
     title: "Ding Ding",
     category: "Health & Wellness",
     description: "Meditation and mindfulness companion for daily practice.",
-    image: "https://placehold.co/600x400",
-    tags: ["Mobile App", "UI Design", "Protyping"],
+    detailedDescription:
+      "Ding Ding is a mobile app designed to support daily meditation and mindfulness practice with guided sessions, progress tracking, and personalized recommendations to help users build a consistent meditation habit.",
+    tags: ["Mobile App", "UI Design", "Prototyping"],
+    role: "UI/UX Designer",
+    team: ["Ruben Hernandez", "Meditation Expert"],
+    timeline: "6 weeks",
+    links: [
+      { label: "GitHub", url: "https://github.com" },
+      { label: "Figma Design", url: "https://figma.com" },
+    ],
+    mainImage: "https://placehold.co/600x400",
+    images: [
+      {
+        url: "https://placehold.co/800x600",
+        caption: "Meditation session screen",
+      },
+      {
+        url: "https://placehold.co/800x600",
+        caption: "Progress tracking interface",
+      },
+    ],
+    challenges:
+      "Creating a calm and distraction-free interface that encourages users to meditate regularly while providing enough structure and guidance without overwhelming them.",
+    solution:
+      "Designed a serene user interface with soft colors, clear typography, and intuitive navigation that guides users through meditation sessions and celebrates their milestones.",
+    impact:
+      "Developed a compelling prototype that demonstrated strong potential for user retention and engagement in the meditation app market.",
   },
 ];
