@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useProject } from "../context/useProject";
 import { ImageWithFallback, PageContainer } from "../components";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,10 @@ import { ArrowLeft } from "lucide-react";
 export const Project = () => {
   const { selectedProject } = useProject();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!selectedProject) {
     return (
@@ -19,9 +24,6 @@ export const Project = () => {
     <PageContainer>
       <div className="max-w-4xl mx-auto">
         <div className="space-y-4">
-          {/* <span className="text-xs text-white/50 uppercase tracking-[0.2em]">
-            {selectedProject.category}
-          </span> */}
           <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold">
             {selectedProject.title}
           </h1>
@@ -31,7 +33,7 @@ export const Project = () => {
                 Overview
               </h2>
             </div>
-            <div>
+            <div className="w-5/8 text-left">
               <p className="text-white/70 text-lg leading-relaxed">
                 {selectedProject.description}
               </p>
