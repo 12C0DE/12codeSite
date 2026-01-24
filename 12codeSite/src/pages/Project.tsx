@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useProject } from "../context/useProject";
-import { ImageWithFallback, PageContainer } from "../components";
+import { ImageWithFallback, PageContainer, ProjectMeta } from "../components";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Calendar, ExternalLink, Users } from "lucide-react";
 
 export const Project = () => {
   const { selectedProject } = useProject();
@@ -39,6 +39,41 @@ export const Project = () => {
               </p>
             </div>
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-24 mt-24">
+            {/* Role */}
+            <ProjectMeta title="My Role" content={selectedProject.role} />
+            <ProjectMeta
+              title="Team"
+              content={selectedProject.team}
+              icon={<Users className="size-3" />}
+            />
+            <ProjectMeta
+              title="Timeline"
+              content={selectedProject.timeline}
+              icon={<Calendar className="size-3" />}
+            />
+            <ProjectMeta
+              title="Links"
+              content={
+                <div className="space-y-2">
+                  {selectedProject.links.map((link, idx) => (
+                    <a
+                      key={idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm md:text-base text-white/80 hover:text-white transition-colors group"
+                    >
+                      <span>{link.label}</span>
+                      <ExternalLink className="size-3.5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
+                  ))}
+                </div>
+              }
+            />
+          </div>
+
           <div className="mb-24">
             <div className="h-px bg-white/20 w-12 mb-8"></div>
             <h2 className="text-3xl md:text-4xl text-white mb-12 md:mb-16 tracking-tight">
@@ -57,7 +92,7 @@ export const Project = () => {
                   <div
                     className={`${idx % 2 === 1 ? "md:order-2" : "md:order-1"}`}
                   >
-                    <div className="relative overflow-hidden rounded-sm aspect-[4/3] bg-zinc-900">
+                    <div className="relative overflow-hidden rounded-sm aspect-4/3 bg-zinc-900">
                       <ImageWithFallback
                         src={img.url}
                         alt={img.caption}

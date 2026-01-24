@@ -11,11 +11,11 @@ export const projects: ProjectData[] = [
       "A comprehensive website for Omex Construction that highlights their portfolio of completed projects, showcases their construction expertise, and provides an easy way for potential clients to get in touch for project inquiries and consultations.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
     role: "Full Stack Developer & UI/UX Designer",
-    team: ["Ruben Hernandez", "Design Partner"],
+    team: ["Ruben Hernandez", "Leo Ontiveros - Owner"],
     timeline: "3 months",
     links: [
       { label: "Live Site", url: "https://omexconstruction.com" },
-      { label: "GitHub", url: "https://github.com" },
+      { label: "GitHub", url: "https://github.com/12C0DE/Omex" },
     ],
     mainImage: "https://placehold.co/600x400",
     images: [
