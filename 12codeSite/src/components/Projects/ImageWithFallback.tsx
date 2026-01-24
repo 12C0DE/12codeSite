@@ -35,8 +35,6 @@ export const ImageWithFallback = ({
       src={src}
       alt={alt}
       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
-      //   style={style}
-      //   {...rest}
       onError={handleError}
     />
   );

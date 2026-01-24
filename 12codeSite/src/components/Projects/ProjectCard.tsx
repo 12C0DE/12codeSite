@@ -1,9 +1,10 @@
 import { ImageWithFallback } from "./index";
-import { ArrowUpRight, Globe } from "lucide-react";
+import { ArrowDown, Globe } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 import { useNavigate } from "react-router-dom";
 import { useProject } from "../../context/useProject";
 import type { ProjectData } from "../../types/ProjectData";
+import { ProjectBadge } from "./index";
 
 export const ProjectCard = (props: ProjectData) => {
   const navigate = useNavigate();
@@ -37,11 +38,11 @@ export const ProjectCard = (props: ProjectData) => {
         <ImageWithFallback src={props.mainImage} alt={props.title} />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
         <div
-          className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-45"
+          className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center -rotate-90 md:rotate-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-90"
           onClick={handleViewProject}
           data-tooltip-id={`project-view-${props.title}-tip`}
         >
-          <ArrowUpRight className="size-6 text-white" />
+          <ArrowDown className="size-6 text-white" />
         </div>
         <Tooltip
           id={`project-view-${props.title}-tip`}
@@ -80,12 +81,7 @@ export const ProjectCard = (props: ProjectData) => {
         <p className="text-white/60 leading-relaxed">{props.description}</p>
         <div className="flex flex-wrap gap-2 pt-2">
           {props.tags.map((tag: string) => (
-            <span
-              key={tag}
-              className="px-4 py-1.5 border border-white/20 rounded-full text-sm text-white/70"
-            >
-              {tag}
-            </span>
+            <ProjectBadge key={tag} label={tag} />
           ))}
         </div>
       </div>

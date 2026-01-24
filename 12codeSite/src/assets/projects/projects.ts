@@ -1,4 +1,5 @@
 import type { ProjectData } from "../../types/ProjectData";
+import omexLogo from "./omex_logo.png";
 
 export const projects: ProjectData[] = [
   {
@@ -17,9 +18,10 @@ export const projects: ProjectData[] = [
       { label: "Live Site", url: "https://omexconstruction.com" },
       { label: "GitHub", url: "https://github.com/12C0DE/Omex" },
     ],
-    mainImage: "https://placehold.co/600x400",
+    mainImage: omexLogo,
     images: [
       { url: "https://placehold.co/800x600", caption: "Homepage design" },
+      { url: "https://placehold.co/800x600", caption: "Portfolio section" },
       { url: "https://placehold.co/800x600", caption: "Portfolio section" },
       { url: "https://placehold.co/800x600", caption: "Portfolio section" },
     ],
