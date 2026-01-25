@@ -2,6 +2,8 @@ import type { ProjectData } from "../../types/ProjectData";
 import omexLogo from "./omex_logo.png";
 import CC_Logo from "./CC_img.png";
 import omexFigma1 from "./Omex_figma1.png";
+import uplift_logo from "./Uplift.png";
+import dingding_img from "./dingding.png";
 
 export const projects: ProjectData[] = [
   {
@@ -12,7 +14,12 @@ export const projects: ProjectData[] = [
       "This site showcases Omex's construction expertise and portfolio, providing clients with a clear view of our craftsmanship and a simple way to contact them for project inquiries.",
     detailedDescription:
       "A comprehensive website for Omex Construction that highlights their portfolio of completed projects, showcases their construction expertise, and provides an easy way for potential clients to get in touch for project inquiries and consultations.",
-    tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
+    tags: [
+      "UI/UX Design",
+      "Software Build",
+      "AWS Serverless",
+      "Netlify Deployment",
+    ],
     role: ["Full Stack Developer", "UI/UX Designer"],
     team: ["Leo Ontiveros - Owner"],
     timeline: "3 months",
@@ -82,11 +89,11 @@ export const projects: ProjectData[] = [
   {
     id: "uplift",
     title: "Uplift",
-    category: "Health & Wellness",
+    category: "Mobile App",
     description: "Mobile app to track workouts.",
     detailedDescription:
       "Uplift is a mobile fitness tracking application that helps users monitor their workout progress, set fitness goals, and track various exercise types with detailed analytics and progress charts.",
-    tags: ["Mobile App", "UI Design", "Prototyping"],
+    tags: ["UI Design", "Prototyping", "Expo Go"],
     role: "UI/UX Designer & Mobile Developer",
     team: ["Fitness Consultant"],
     timeline: "2 months",
@@ -94,7 +101,7 @@ export const projects: ProjectData[] = [
       { label: "GitHub", url: "https://github.com" },
       { label: "Figma Design", url: "https://figma.com" },
     ],
-    mainImage: "https://placehold.co/600x400",
+    mainImage: uplift_logo,
     images: [
       { url: "https://placehold.co/800x600", caption: "Workout dashboard" },
       { url: "https://placehold.co/800x600", caption: "Progress analytics" },
@@ -109,11 +116,11 @@ export const projects: ProjectData[] = [
   {
     id: "ding-ding",
     title: "Ding Ding",
-    category: "Health & Wellness",
+    category: "Mobile App",
     description: "Meditation and mindfulness companion for daily practice.",
     detailedDescription:
       "Ding Ding is a mobile app designed to support daily meditation and mindfulness practice with guided sessions, progress tracking, and personalized recommendations to help users build a consistent meditation habit.",
-    tags: ["Mobile App", "UI Design", "Prototyping"],
+    tags: ["UI Design", "Prototyping", "Expo Go"],
     role: "UI/UX Designer",
     team: ["Meditation Expert"],
     timeline: "6 weeks",
@@ -121,7 +128,7 @@ export const projects: ProjectData[] = [
       { label: "GitHub", url: "https://github.com" },
       { label: "Figma Design", url: "https://figma.com" },
     ],
-    mainImage: "https://placehold.co/600x400",
+    mainImage: dingding_img,
     images: [
       {
         url: "https://placehold.co/800x600",

@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "./index";
-import { ArrowDown, Globe } from "lucide-react";
+import { ArrowDown, ExternalLink } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 import { useNavigate } from "react-router-dom";
 import { useProject } from "../../context/useProject";
@@ -36,7 +36,7 @@ export const ProjectCard = (props: ProjectData) => {
     <div className="group">
       <div className="relative overflow-hidden rounded-sm mb-6 aspect-4/3 bg-zinc-900">
         <ImageWithFallback src={props.mainImage} alt={props.title} />
-        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+        <div className="absolute bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
         <div
           className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center -rotate-90 md:rotate-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-90 hover:cursor-pointer"
           onClick={handleViewProject}
@@ -59,16 +59,15 @@ export const ProjectCard = (props: ProjectData) => {
         </div>
         <div className="flex flex-row justify-between items-center">
           <h3 className="text-3xl text-white">{props.title}</h3>
-          {props.url && (
+          {props.links[0].label === "Live Site" && (
             <>
               <a
-                href={props.url}
+                href={props.links[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
                 data-tooltip-id={`project-${props.title}-tip`}
               >
-                <Globe size={32} className=" hover:text-blue-400" />
+                <ExternalLink size={24} className=" hover:text-blue-400" />
               </a>
               <Tooltip
                 id={`project-${props.title}-tip`}
