@@ -43,7 +43,7 @@ export const Project = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-24 mt-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-24 mt-24 justify-evenly">
             <ProjectMeta title="My Role" content={selectedProject.role} />
             <ProjectMeta
               title="Team"
