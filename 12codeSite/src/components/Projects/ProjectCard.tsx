@@ -33,12 +33,12 @@ export const ProjectCard = (props: ProjectData) => {
   };
 
   return (
-    <div className="group cursor-pointer">
+    <div className="group">
       <div className="relative overflow-hidden rounded-sm mb-6 aspect-4/3 bg-zinc-900">
         <ImageWithFallback src={props.mainImage} alt={props.title} />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
         <div
-          className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center -rotate-90 md:rotate-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-90"
+          className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center -rotate-90 md:rotate-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-90 hover:cursor-pointer"
           onClick={handleViewProject}
           data-tooltip-id={`project-view-${props.title}-tip`}
         >

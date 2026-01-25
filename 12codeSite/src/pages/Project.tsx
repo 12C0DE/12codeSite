@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useProject } from "../context/useProject";
 import {
-  ImageWithFallback,
+  // ImageWithFallback,
   PageContainer,
   ProjectBadge,
   ProjectMeta,
@@ -27,7 +27,7 @@ export const Project = () => {
 
   return (
     <PageContainer>
-      <div className="max-w-4xl px-4">
+      <div className="max-w-6xl px-4">
         <div className="space-y-4">
           <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold -ml-1 tracking-tight">
             {selectedProject.title}
@@ -101,21 +101,27 @@ export const Project = () => {
                     className={`${idx % 2 === 1 ? "md:order-2" : "md:order-1"}`}
                   >
                     <div className="relative overflow-hidden rounded-sm aspect-4/3 bg-zinc-900">
-                      <ImageWithFallback
+                      {/* <ImageWithFallback
                         src={img.url}
                         alt={`${selectedProject.title}_${idx}`}
+                      /> */}
+                      <img
+                        src={img.url}
+                        alt={`${selectedProject.title}_${idx}`}
+                        className="w-full object-fit"
                       />
+                      <div className="absolute inset-0 bg-black/10" />
                     </div>
                   </div>
 
                   <div
-                    className={`${idx % 2 === 1 ? "md:order-1" : "md:order-2"} flex flex-col justify-center`}
+                    className={`flex flex-col justify-center ${idx % 2 === 1 ? "md:order-1 justify-self-end" : "md:order-2"}`}
                   >
-                    <div className="space-y-3 md:space-y-4">
-                      <p className="text-sm md:text-base text-white/60 leading-relaxed">
-                        {img.caption}
-                      </p>
-                    </div>
+                    {/* <div className="space-y-3 md:space-y-4"> */}
+                    <p className="text-sm md:text-base text-white/60 leading-relaxed">
+                      {img.caption}
+                    </p>
+                    {/* </div> */}
                   </div>
                 </div>
               ))}

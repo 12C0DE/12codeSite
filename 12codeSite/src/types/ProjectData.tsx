@@ -5,7 +5,7 @@ export interface ProjectData {
   description: string;
   tags: string[];
   detailedDescription: string;
-  role: string;
+  role: string | string[];
   team: string[];
   timeline: string;
   links: { label: string; url: string }[];

@@ -1,5 +1,7 @@
 import type { ProjectData } from "../../types/ProjectData";
 import omexLogo from "./omex_logo.png";
+import CC_Logo from "./CC_img.png";
+import omexFigma1 from "./Omex_figma1.png";
 
 export const projects: ProjectData[] = [
   {
@@ -11,17 +13,28 @@ export const projects: ProjectData[] = [
     detailedDescription:
       "A comprehensive website for Omex Construction that highlights their portfolio of completed projects, showcases their construction expertise, and provides an easy way for potential clients to get in touch for project inquiries and consultations.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
-    role: "Full Stack Developer & UI/UX Designer",
-    team: ["Ruben Hernandez", "Leo Ontiveros - Owner"],
+    role: ["Full Stack Developer", "UI/UX Designer"],
+    team: ["Leo Ontiveros - Owner"],
     timeline: "3 months",
     links: [
       { label: "Live Site", url: "https://omexconstruction.com" },
       { label: "GitHub", url: "https://github.com/12C0DE/Omex" },
+      {
+        label: "Figma Design",
+        url: "https://www.figma.com/design/UfhBDOl5MkyIEzv6ZWmqHh/OMEX?node-id=0-1&t=C3nGFs242Rs1akvg-1",
+      },
     ],
     mainImage: omexLogo,
     images: [
-      { url: "https://placehold.co/800x600", caption: "Homepage design" },
-      { url: "https://placehold.co/800x600", caption: "Portfolio section" },
+      {
+        url: "https://placehold.co/800x600",
+        caption:
+          "The idea was simplicity. Let's build a website that is mobile friendly and displays our past work, with a quick way to reach out and review our work.",
+      },
+      {
+        url: omexFigma1,
+        caption: "Next I started in Figma. Minimalist design approach. ",
+      },
       { url: "https://placehold.co/800x600", caption: "Portfolio section" },
       { url: "https://placehold.co/800x600", caption: "Portfolio section" },
     ],
@@ -42,7 +55,7 @@ export const projects: ProjectData[] = [
       "Chore Champ is a platform that bridges the gap between people needing help with household tasks and service providers looking for work. The platform features real-time matching, secure payments, and user reviews to ensure quality service.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
     role: "Frontend Developer & Lead Designer",
-    team: ["Ruben Hernandez", "Backend Developer", "Project Manager"],
+    team: ["Backend Developer", "Project Manager"],
     timeline: "4 months",
     links: [
       {
@@ -51,7 +64,7 @@ export const projects: ProjectData[] = [
       },
       { label: "GitHub", url: "https://github.com" },
     ],
-    mainImage: "https://placehold.co/600x400",
+    mainImage: CC_Logo,
     images: [
       { url: "https://placehold.co/800x600", caption: "Service listing page" },
       {
@@ -75,7 +88,7 @@ export const projects: ProjectData[] = [
       "Uplift is a mobile fitness tracking application that helps users monitor their workout progress, set fitness goals, and track various exercise types with detailed analytics and progress charts.",
     tags: ["Mobile App", "UI Design", "Prototyping"],
     role: "UI/UX Designer & Mobile Developer",
-    team: ["Ruben Hernandez", "Fitness Consultant"],
+    team: ["Fitness Consultant"],
     timeline: "2 months",
     links: [
       { label: "GitHub", url: "https://github.com" },
@@ -102,7 +115,7 @@ export const projects: ProjectData[] = [
       "Ding Ding is a mobile app designed to support daily meditation and mindfulness practice with guided sessions, progress tracking, and personalized recommendations to help users build a consistent meditation habit.",
     tags: ["Mobile App", "UI Design", "Prototyping"],
     role: "UI/UX Designer",
-    team: ["Ruben Hernandez", "Meditation Expert"],
+    team: ["Meditation Expert"],
     timeline: "6 weeks",
     links: [
       { label: "GitHub", url: "https://github.com" },

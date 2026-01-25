@@ -25,8 +25,8 @@ export const ImageWithFallback = ({
         <img
           src={ERROR_IMG_SRC}
           alt="Error loading image"
-          //   {...rest}
           data-original-url={src}
+          className="object-scale-down"
         />
       </div>
     </div>
