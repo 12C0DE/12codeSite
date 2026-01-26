@@ -17,16 +17,13 @@ export const ImageWithFallback = ({
   };
 
   return didError ? (
-    <div
-      className="inline-block bg-gray-100 text-center align-middle}"
-      //   style={style}
-    >
+    <div className="inline-block bg-gray-100 text-center align-middle}">
       <div className="flex items-center justify-center w-full h-full">
         <img
           src={ERROR_IMG_SRC}
           alt="Error loading image"
-          //   {...rest}
           data-original-url={src}
+          className="object-scale-down"
         />
       </div>
     </div>
@@ -34,9 +31,7 @@ export const ImageWithFallback = ({
     <img
       src={src}
       alt={alt}
-      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
-      //   style={style}
-      //   {...rest}
+      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
       onError={handleError}
     />
   );

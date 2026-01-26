@@ -11,8 +11,8 @@ export const Projects = () => {
           <Heading text="Featured Projects" />
         </div>
         <div className="grid md:grid-cols-2 gap-16">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} {...project} index={index} />
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
           ))}
         </div>
       </div>

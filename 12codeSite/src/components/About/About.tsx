@@ -16,9 +16,9 @@ export const About = () => {
                 sounds like what I'd do best at.
               </p>
               <p>
-                Great design is invisible – it simply works. My
-                goal is to create interfaces that are not only visually stunning
-                but also intuitive and accessible to all users.
+                Great design is invisible – it simply works. My goal is to
+                create interfaces that are not only visually stunning but also
+                intuitive and accessible to all users.
               </p>
             </div>
             <Heading text="My Life" />
@@ -36,21 +36,37 @@ export const About = () => {
                   role="I.T. Product Analyst"
                   company="Flint Hills Resources"
                   timeline="2/2025 - Present"
+                  link="https://www.fhr.com/"
                 />
                 <ExperienceBlock
                   role="Software Engineer"
                   company="Flint Hills Resources"
                   timeline="5/2023 - 2/2025"
+                  link="https://www.fhr.com/"
                 />
                 <ExperienceBlock
                   role="Software Consultant"
                   company="Keyhole Software"
                   timeline="9/2021 - 5/2023"
+                  link="https://keyholesoftware.com/"
                 />
                 <ExperienceBlock
                   role="Software Engineer III"
                   company="Abbott"
                   timeline="9/2018 - 9/2021"
+                  link="https://www.abbott.com/en-us/homepage"
+                />
+                <ExperienceBlock
+                  role="Software Developer"
+                  company="Design Resources, Inc."
+                  timeline="9/2017 - 9/2018"
+                  link="https://www.dridesign.com/"
+                />
+                <ExperienceBlock
+                  role="Application Developer"
+                  company="Airbus Americas"
+                  timeline="9/2013 - 9/2017"
+                  link="https://www.airbus.com/en"
                 />
               </div>
             </div>
