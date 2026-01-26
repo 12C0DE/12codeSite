@@ -61,8 +61,12 @@ export const projects: ProjectData[] = [
     detailedDescription:
       "Chore Champ is a platform that bridges the gap between people needing help with household tasks and service providers looking for work. The platform features real-time matching, secure payments, and user reviews to ensure quality service.",
     tags: ["UI/UX Design", "Software Build", "AWS Deployment"],
-    role: "Frontend Developer & Lead Designer",
-    team: ["Backend Developer", "Project Manager"],
+    role: ["Frontend Developer", "Lead Designer"],
+    team: [
+      "Isabel Santiago - Backend Developer",
+      "Kaelan Macias - Project Manager",
+      "Zach Crews - Project Operations Manager",
+    ],
     timeline: "4 months",
     links: [
       {
@@ -93,9 +97,9 @@ export const projects: ProjectData[] = [
     description: "Mobile app to track workouts.",
     detailedDescription:
       "Uplift is a mobile fitness tracking application that helps users monitor their workout progress, set fitness goals, and track various exercise types with detailed analytics and progress charts.",
-    tags: ["UI Design", "Prototyping", "Expo Go"],
-    role: "UI/UX Designer & Mobile Developer",
-    team: ["Fitness Consultant"],
+    tags: ["UI Design", "Prototyping", "React Native", "Expo Go"],
+    role: ["UI/UX Designer", "Mobile Developer"],
+    team: ["Solo Project"],
     timeline: "2 months",
     links: [
       { label: "GitHub", url: "https://github.com" },
@@ -117,12 +121,12 @@ export const projects: ProjectData[] = [
     id: "ding-ding",
     title: "Ding Ding",
     category: "Mobile App",
-    description: "Meditation and mindfulness companion for daily practice.",
+    description: "Simple boxing timer app for training sessions.",
     detailedDescription:
       "Ding Ding is a mobile app designed to support daily meditation and mindfulness practice with guided sessions, progress tracking, and personalized recommendations to help users build a consistent meditation habit.",
-    tags: ["UI Design", "Prototyping", "Expo Go"],
-    role: "UI/UX Designer",
-    team: ["Meditation Expert"],
+    tags: ["UI Design", "Prototyping", "React Native", "Expo Go"],
+    role: ["UI/UX Designer", "Mobile Developer"],
+    team: ["Solo Project"],
     timeline: "6 weeks",
     links: [
       { label: "GitHub", url: "https://github.com" },
