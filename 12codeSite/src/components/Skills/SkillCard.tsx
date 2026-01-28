@@ -99,7 +99,7 @@ export const SkillCard = ({
       </div>
       <div
         id="backofCard"
-        className="absolute inset-0 rounded-xl p-3 shadow-xl flex flex-col justify-between lg:content-between overflow-hidden "
+        className="absolute inset-0 rounded-xl p-3 shadow-xl flex flex-col justify-between lg:content-between overflow-hidden h-68 md:h-auto"
         style={{
           backgroundColor: "#1a1a1a",
           border: "2px solid rgba(255, 255, 255, 0.1)",
@@ -115,12 +115,12 @@ export const SkillCard = ({
         <div className="relative z-10">
           <article className="mb-2">
             <div
-              className="w-14 h-14 lg:w-20 lg:h-20 lg:mr-4 -ml-2 rounded-full flex items-center justify-center text-2xl lg:text-6xl float-left mr-1"
+              className="w-14 h-14 lg:w-20 lg:h-20 lg:mr-4 -ml-2 rounded-full flex items-center justify-center text-2xl lg:text-6xl float-left mr-1 shrink"
               style={{ backgroundColor: color }}
             >
               {getIcon(icon)}
             </div>
-            <h3 className="invisible md: visible text-md lg:text-xl text-white mb-1 font-bold">
+            <h3 className="text-md lg:text-xl text-white mb-1 md:font-bold">
               {name}
             </h3>
             <p className="text-white/60 text-[10px] md:text-sm">{desc}</p>

@@ -3,7 +3,7 @@ import { Tooltip } from "react-tooltip";
 
 export const ContactIconsGroup = () => {
   return (
-    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent">
+    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent z-200">
       <a
         href="mailto:12codeHz@gmail.com"
         data-tooltip-id="emailTip"

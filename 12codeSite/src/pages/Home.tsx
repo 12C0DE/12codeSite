@@ -10,7 +10,7 @@ import {
 
 export const Home = () => {
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
       <PageContainer>
         <LandingPage />
         <Projects />
@@ -19,6 +19,6 @@ export const Home = () => {
         <UnderConstruction />
       </PageContainer>
       <ContactIconsGroup />
-    </>
+    </div>
   );
 };
