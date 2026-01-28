@@ -20,7 +20,7 @@ export const ThreeSkills = () => {
 
   if (isMobile) {
     return (
-      <div className="w-full py-12 px-4">
+      <div className="w-full py-12 px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1 max-w-xl mx-auto">
           {skills.map((skill, index) => {
             const isSelected = selectedCard === index;
@@ -34,7 +34,7 @@ export const ThreeSkills = () => {
                 }}
                 initial={false}
                 animate={{
-                  scale: isSelected ? 1.5 : 1,
+                  scale: isSelected ? 1.42 : 1,
                   x: isSelected ? (index % 2 == 0 ? 50 : -25) : 0,
                 }}
                 transition={{
@@ -65,9 +65,9 @@ export const ThreeSkills = () => {
           })}
         </div>
         {selectedCard === null && (
-          <div className="text-center px-4 mt-4">
+          <div className="text-center px-4 mt-8">
             <p className="text-white/40 text-sm">
-              Swipe to explore • Tap to view details
+              Tap to view details
             </p>
           </div>
         )}

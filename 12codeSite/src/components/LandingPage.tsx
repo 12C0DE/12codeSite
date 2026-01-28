@@ -5,18 +5,18 @@ export const LandingPage = () => {
   const scrollToElement = useScrollToElement();
 
   return (
-    <section className="min-h-screen flex px-4">
+    <section className="min-h-screen flex px-2 md:px-4">
       <div className="xs:max-w-full md:max-w-6xl w-full">
         <div className="mb-8 flex flex-row flex-wrap">
           <div className="flex flex-row w-full justify-between">
             <div className="flex flex-col gap-10 md:gap-7">
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-4 font-hero leading-none">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none">
                 PORT
               </h1>
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-4 font-hero leading-none -my-20">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none -my-20">
                 FO
               </h1>
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-4 font-hero leading-none">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none">
                 LIO
               </h1>
             </div>
