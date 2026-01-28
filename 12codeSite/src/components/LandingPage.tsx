@@ -5,7 +5,7 @@ export const LandingPage = () => {
   const scrollToElement = useScrollToElement();
 
   return (
-    <section className="min-h-screen flex px-2 md:px-4">
+    <section className="min-h-screen flex px-2 md:px-4 md:pb-32 items-center">
       <div className="xs:max-w-full md:max-w-6xl w-full">
         <div className="mb-8 flex flex-row flex-wrap">
           <div className="flex flex-row w-full justify-between">

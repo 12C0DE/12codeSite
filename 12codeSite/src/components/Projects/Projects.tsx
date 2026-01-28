@@ -4,7 +4,7 @@ import { Heading, PageTitle } from "../Layout";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="px-4 py-20">
+    <section id="projects" className="px-4 py-32">
       <div className="max-w-6xl mx-auto">
         <div className="mb-20">
           <PageTitle title="Selected Work" />

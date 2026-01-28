@@ -10,7 +10,7 @@ import {
 
 export const Home = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <PageContainer>
         <LandingPage />
         <Projects />
