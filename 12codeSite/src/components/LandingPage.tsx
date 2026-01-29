@@ -5,7 +5,10 @@ export const LandingPage = () => {
   const scrollToElement = useScrollToElement();
 
   return (
-    <section className="min-h-screen flex mx-auto md:px-4 md:pb-32 items-center overflow-x-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex mx-auto md:px-4 md:pb-32 items-center overflow-x-hidden"
+    >
       <div className="max-w-full md:max-w-6xl w-full">
         <div className="mb-8 flex flex-row flex-wrap">
           <div className="flex flex-row w-full justify-between">
@@ -20,7 +23,7 @@ export const LandingPage = () => {
                 LIO
               </h1>
             </div>
-            <div className="flex flex-row items-end text-7xl md:text-9xl text-white/10 z-50 font-hero font=black">
+            <div className="flex flex-row items-end text-7xl md:text-9xl text-white/10 z-20 font-hero font=black">
               {new Date().getFullYear()}
             </div>
           </div>
