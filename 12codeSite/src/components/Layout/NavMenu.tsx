@@ -125,7 +125,7 @@ export const NavMenu = ({ isVisible }: NavMenuProps) => {
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg transition-all duration-500 ${
+          className={`fixed inset-0 z-300 bg-black/95 backdrop-blur-lg transition-all duration-500 ${
             isMobileMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"

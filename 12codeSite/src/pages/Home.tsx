@@ -1,16 +1,18 @@
 import {
   About,
+  Contact,
   ContactIconsGroup,
   LandingPage,
+  NavMenu,
   PageContainer,
   Projects,
   Skills,
-  Contact,
 } from "../components/index";
 
 export const Home = () => {
   return (
     <div className="w-full">
+      <NavMenu isVisible={true} />
       <PageContainer>
         <LandingPage />
         <About />

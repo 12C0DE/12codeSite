@@ -21,20 +21,20 @@ export const ContactIconsGroup = () => {
         <Send className="size-6 xl:size-8" />
       </a>
       <a
-        href="https://github.com/12C0DE"
-        className="hover:text-[var(--github-color)]"
-        target="_blank"
-        data-tooltip-id="ghTip"
-      >
-        <GithubLogo className="size-6 xl:size-8"/>
-      </a>
-      <a
         href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
         target="_blank"
         data-tooltip-id="linkedInTip"
         className="hover:text-[var(--linkedIn-color)] transition-colors"
       >
         <Linkedin size={32} strokeWidth={1.5} className="size-6 xl:size-8" />
+      </a>
+      <a
+        href="https://github.com/12C0DE"
+        className="hover:text-[var(--github-color)]"
+        target="_blank"
+        data-tooltip-id="ghTip"
+      >
+        <GithubLogo className="size-6 xl:size-8"/>
       </a>
       <Tooltip
         id="emailTip"
