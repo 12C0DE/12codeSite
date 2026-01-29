@@ -32,19 +32,19 @@ export const Contact = () => {
             >
               <span>12codeHz@gmail.com</span>
               <div className="size-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-white group-hover:rotate-45 transition-all duration-300">
-                <ArrowUpRight className="size-5 rotate-45 md:rotate-0" />
+                <ArrowUpRight className="size-6 rotate-45 md:rotate-0" />
               </div>
             </a>
             
-            <div className="flex gap-6">
+            <div className="flex gap-8">
               <a
                 href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
                 target="_blank"
-                className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white"
+                className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white "
                 data-tooltip-id="linkedInTip"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="size-6" />
+                <Linkedin className="size-8 hover:text-[var(--linkedIn-color)] transition-colors" />
               </a>
               <a
                 href="https://github.com/12C0DE"
@@ -53,15 +53,15 @@ export const Contact = () => {
                 data-tooltip-id="ghTip"
                 aria-label="Github"
               >
-                <GithubLogo className="size-6" />
+                <GithubLogo className="size-8" />
               </a>
               <Tooltip
         id="emailTip"
         place="left"
         content="mailto:"
       />
-              <Tooltip id="ghTip" place="bottom" content="View GitHub Profile" />
-              <Tooltip id="linkedInTip" place="right" content="View LinkedIn Profile" />
+              <Tooltip id="ghTip" place="right" content="View GitHub Profile" />
+              <Tooltip id="linkedInTip" place="left" content="View LinkedIn Profile" />
             </div>
           </div>
           
@@ -71,7 +71,7 @@ export const Contact = () => {
                 <h3 className="text-sm text-white/50 uppercase tracking-wider mb-3">
                   Location
                 </h3>
-                <p className="text-xl text-white">Wichita, KS</p>
+                <p className="text-xl text-white">Wichita, KS, USA</p>
               </div>
               <div>
                 <h3 className="text-sm text-white/50 uppercase tracking-wider mb-3">

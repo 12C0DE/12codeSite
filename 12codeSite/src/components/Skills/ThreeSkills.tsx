@@ -34,7 +34,7 @@ export const ThreeSkills = () => {
                 }}
                 initial={false}
                 animate={{
-                  scale: isSelected ? 1.42 : 1,
+                  scale: isSelected ? 1.45 : 1,
                   x: isSelected ? (index % 2 == 0 ? 50 : -25) : 0,
                 }}
                 transition={{
