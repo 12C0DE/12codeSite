@@ -1,15 +1,5 @@
-// import {
-//   About,
-//   ContactIconsGroup,
-//   LandingPage,
-//   PageContainer,
-//   Projects,
-//   Skills,
-//   UnderConstruction,
-//   // WIP,
-// } from "./components/index";
 import { Home, NotFound, Project } from "./pages/index";
-import { ClarityPageTracker } from "./components/index";
+import { ClarityPageTracker, NavMenu } from "./components/index";
 import { ProjectProvider } from "./context/ProjectContext";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useClarity } from "./hooks/useClarity";
@@ -20,6 +10,7 @@ function App() {
 
   return (
     <div className="w-full">
+      <NavMenu isVisible={true} />
       <BrowserRouter>
         <ProjectProvider>
           <ClarityPageTracker />

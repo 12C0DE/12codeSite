@@ -3,7 +3,7 @@ import { Tooltip } from "react-tooltip";
 
 export const ContactIconsGroup = () => {
   return (
-    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent z-200">
+    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black/10 backdrop-blur-sm p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent z-200">
       <a
         href="mailto:12codeHz@gmail.com"
         data-tooltip-id="emailTip"
@@ -37,11 +37,7 @@ export const ContactIconsGroup = () => {
         data-tooltip-id="linkedInTip"
         className="hover:text-[var(--linkedIn-color)] transition-colors"
       >
-        <Linkedin
-          size={32}
-          strokeWidth={1.5}
-          className="size-6 xl:size-8"
-        />
+        <Linkedin size={32} strokeWidth={1.5} className="size-6 xl:size-8" />
       </a>
       <Tooltip
         id="emailTip"

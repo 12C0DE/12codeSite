@@ -2,6 +2,7 @@ export * from "./About/index";
 export * from "./ClarityPageTracker";
 export * from "./ContactIconsGroup";
 export * from "./LandingPage";
+export * from "./Layout/index";
 export * from "./PageContainer";
 export * from "./Projects";
 export * from "./Skills";
