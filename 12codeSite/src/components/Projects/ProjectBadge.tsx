@@ -2,7 +2,7 @@ export const ProjectBadge = ({
   tag,
   label,
 }: {
-  key?: string;
+  tag?: string;
   label: string;
 }) => {
   return (
