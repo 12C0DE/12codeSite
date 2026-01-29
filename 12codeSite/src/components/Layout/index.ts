@@ -1,2 +1,3 @@
-export * from './Heading';
-export * from './PageTitle';
+export * from "./Heading";
+export * from "./NavMenu";
+export * from "./PageTitle";

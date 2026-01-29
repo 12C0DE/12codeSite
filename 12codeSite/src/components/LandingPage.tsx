@@ -5,22 +5,25 @@ export const LandingPage = () => {
   const scrollToElement = useScrollToElement();
 
   return (
-    <section className="min-h-screen flex px-2 md:px-4 md:pb-32 items-center">
-      <div className="xs:max-w-full md:max-w-6xl w-full">
+    <section
+      id="home"
+      className="min-h-screen flex mx-auto md:px-4 md:pb-32 items-center overflow-x-hidden"
+    >
+      <div className="max-w-full md:max-w-6xl w-full">
         <div className="mb-8 flex flex-row flex-wrap">
           <div className="flex flex-row w-full justify-between">
             <div className="flex flex-col gap-10 md:gap-7">
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white font-hero leading-none">
                 PORT
               </h1>
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none -my-20">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white font-hero leading-none -my-20">
                 FO
               </h1>
-              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white -ml-2 font-hero leading-none">
+              <h1 className="text-[8rem] md:text-[10rem] lg:text-[14rem] tracking-tighter text-white font-hero leading-none">
                 LIO
               </h1>
             </div>
-            <div className="flex flex-row items-end text-7xl md:text-9xl text-white/10 z-50 font-hero font=black">
+            <div className="flex flex-row items-end text-7xl md:text-9xl text-white/10 z-20 font-hero font=black">
               {new Date().getFullYear()}
             </div>
           </div>
@@ -46,7 +49,7 @@ export const LandingPage = () => {
           </div>
         </div>
         {/* END of SE -> Des */}
-        <div className="max-w-4xl flex flex-row gap-1 items-baseline mb-8">
+        <div className="flex flex-row gap-1 items-baseline mb-8">
           <h2 className="text-4xl text-white">Hey, I'm </h2>
           <h2 className="text-4xl md:text-6xl -tracking-4">12</h2>
           <h2 className="text-4xl text-white ml-1 md:ml-2">uben.</h2>
@@ -58,10 +61,10 @@ export const LandingPage = () => {
           </p>
           <div>
             <a
-              href="#projects"
+              href="#about"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToElement("projects");
+                scrollToElement("about");
               }}
               className="group inline-flex items-center gap-8 text-white hover:text-white/70 transition-colors"
             >

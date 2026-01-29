@@ -13,8 +13,8 @@ export const Home = () => {
     <div className="w-full overflow-x-hidden">
       <PageContainer>
         <LandingPage />
-        <Projects />
         <About />
+        <Projects />
         <Skills />
         <UnderConstruction />
       </PageContainer>

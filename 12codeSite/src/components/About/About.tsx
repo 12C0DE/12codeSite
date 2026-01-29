@@ -11,14 +11,19 @@ export const About = () => {
             <Heading text="Design Philosophy" />
             <div className="space-y-6 mb-8 text-lg text-white/60 leading-relaxed">
               <p>
-                I design software with people in mind. If something is hard to use, it's not the user's fault—it's a design problem.
+                I design software with people in mind. If something is hard to
+                use, it's not the user's fault—it's a design problem.
               </p>
               <p>
-                As an engineer with a deep focus on UI/UX, I work on complex ideas and create intuitive, 
-                clean designs that make the experience feel effortless. My process is user-centered—grounded in how people actually interact, 
-                not in assumptions about how engineers think things should work.
+                As an engineer with a deep focus on UI/UX, I work on complex
+                ideas and create intuitive, clean designs that make the
+                experience feel effortless. My process is user-centered—grounded
+                in how people actually interact, not in assumptions about how
+                engineers think things should work.
               </p>
-              <h4 className="italic">Code and Design thoughtfully to make it make sense</h4>
+              <h4 className="italic">
+                Code and Design thoughtfully to make it make sense
+              </h4>
             </div>
             <Heading text="My Life" />
             <div className="space-y-6 text-lg text-white/60 leading-relaxed">
