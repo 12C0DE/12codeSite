@@ -30,7 +30,7 @@ export const skills = [
     desc: "SQL and NoSQL database systems for structured and flexible data management",
     icon: "database",
     experience: 4,
-    use: "SQL, PL/SQL, MySQL, DynamoDB, MongoDB",
+    use: "SQL, MySQL, Graph, PL/SQL, DynamoDB, MongoDB",
     years: getYears(2017),
     type: "Data Storage",
     cardIndex: 2,
