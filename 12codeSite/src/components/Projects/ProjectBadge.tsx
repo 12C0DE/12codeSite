@@ -1,5 +1,5 @@
 export const ProjectBadge = ({
-  key,
+  tag,
   label,
 }: {
   key?: string;
@@ -7,7 +7,7 @@ export const ProjectBadge = ({
 }) => {
   return (
     <span
-      key={key}
+      key={tag}
       className="px-4 py-1.5 border border-white/20 rounded-full text-sm text-white/70"
     >
       {label}
