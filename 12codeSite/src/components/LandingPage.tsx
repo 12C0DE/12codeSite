@@ -7,7 +7,7 @@ export const LandingPage = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex mx-auto md:px-4 md:pb-32 items-center overflow-x-hidden"
+      className="min-h-screen flex mx-2 md:mx-0 md:px-4 md:pb-32 items-center overflow-x-hidden"
     >
       <div className="max-w-full md:max-w-6xl w-full">
         <div className="mb-8 flex flex-row flex-wrap">
