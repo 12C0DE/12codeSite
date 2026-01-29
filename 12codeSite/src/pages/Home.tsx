@@ -5,18 +5,18 @@ import {
   PageContainer,
   Projects,
   Skills,
-  UnderConstruction,
+  Contact,
 } from "../components/index";
 
 export const Home = () => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full">
       <PageContainer>
         <LandingPage />
         <About />
         <Projects />
         <Skills />
-        <UnderConstruction />
+        <Contact />
       </PageContainer>
       <ContactIconsGroup />
     </div>
