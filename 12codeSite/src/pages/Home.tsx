@@ -5,7 +5,7 @@ import {
   PageContainer,
   Projects,
   Skills,
-  UnderConstruction,
+  Contact,
 } from "../components/index";
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
         <About />
         <Projects />
         <Skills />
-        <UnderConstruction />
+        <Contact />
       </PageContainer>
       <ContactIconsGroup />
     </div>
