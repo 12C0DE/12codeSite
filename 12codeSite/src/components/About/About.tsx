@@ -5,10 +5,10 @@ export const About = () => {
   return (
     <section id="about" className="px-4 py-32">
       <div className="max-w-6xl">
+        <PageTitle title="About" />
+        <Heading text="Design Philosophy" />
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <PageTitle title="About" />
-            <Heading text="Design Philosophy" />
             <div className="space-y-6 mb-8 text-lg text-white/60 leading-relaxed">
               <p>
                 I design software with people in mind. If something is hard to

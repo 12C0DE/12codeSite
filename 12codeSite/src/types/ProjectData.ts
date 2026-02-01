@@ -1,7 +1,7 @@
-export type ProjectImage = {
+export interface ProjectImage {
   key: string;
   caption?: string;
-};
+}
 
 export interface ProjectData {
   id: string;
@@ -19,4 +19,5 @@ export interface ProjectData {
   challenges: string;
   solution: string;
   impact: string;
+  url?: string;
 }

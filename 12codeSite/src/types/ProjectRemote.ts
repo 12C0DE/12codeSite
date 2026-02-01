@@ -1,3 +1,5 @@
+import type { ProjectData } from "./ProjectData";
+
 export type ProjectLink = { label: string; url: string };
 
 export type ProjectRemote = {
@@ -11,16 +13,15 @@ export type ProjectRemote = {
   team: string[];
   timeline: string;
   links: ProjectLink[];
-
   mainImageKey: string; // <-- string key to S3 object
   images: { key: string; caption?: string }[];
-
   challenges: string;
   solution: string;
   impact: string;
+  url?: string;
 };
 
-export type ProjectResolved = Omit<ProjectRemote, "mainImageKey" | "images"> & {
+export type ProjectResolved = ProjectData & {
   mainImageUrl: string;
-  images: { url: string; caption?: string }[];
+  images: { key: string; url: string; caption?: string }[];
 };

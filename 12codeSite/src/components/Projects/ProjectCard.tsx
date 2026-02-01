@@ -1,41 +1,24 @@
-import { ImageWithFallback } from "./index";
+import { ImageWithFallback, ProjectBadge } from "./index";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 import { useNavigate } from "react-router-dom";
 import { useProject } from "../../context/useProject";
-import type { ProjectData } from "../../types/ProjectData";
-import { ProjectBadge } from "./index";
+// import type { ProjectData } from "../../types/ProjectData";
+import type { ProjectResolved } from "../../types/ProjectRemote";
 
-export const ProjectCard = (props: ProjectData) => {
+export const ProjectCard = (props: ProjectResolved) => {
   const navigate = useNavigate();
   const { setSelectedProject } = useProject();
 
   const handleViewProject = () => {
-    setSelectedProject({
-      id: props.id,
-      title: props.title,
-      category: props.category,
-      description: props.description,
-      mainImage: props.mainImage,
-      tags: props.tags,
-      detailedDescription: props.detailedDescription,
-      role: props.role,
-      team: props.team,
-      timeline: props.timeline,
-      links: props.links,
-      images: props.images,
-      challenges: props.challenges,
-      solution: props.solution,
-      impact: props.impact,
-      url: props.url,
-    });
+    setSelectedProject(props);
     navigate("/project");
   };
 
   return (
     <div className="group">
       <div className="relative overflow-hidden rounded-sm mb-6 aspect-4/3 bg-zinc-900">
-        <ImageWithFallback src={props.mainImage} alt={props.title} />
+        <ImageWithFallback src={props.mainImageUrl} alt={props.title} />
         <div className="absolute bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
         <div
           className="absolute top-6 right-6 size-12 border border-white/50 rounded-full flex items-center justify-center -rotate-90 md:rotate-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-90 hover:cursor-pointer"

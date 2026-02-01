@@ -1,6 +1,7 @@
-import type { ProjectData } from "../types/ProjectData";
+// import type { ProjectData } from "../types/ProjectData";
+import type { ProjectResolved } from "../types";
 
 export interface ProjectContextType {
-  selectedProject: ProjectData | null;
-  setSelectedProject: (project: ProjectData | null) => void;
+  selectedProject: ProjectResolved | null;
+  setSelectedProject: (project: ProjectResolved | null) => void;
 }

@@ -1,4 +1,4 @@
-const bucket = import.meta.env.VITE_CONTENT_BUCKET;
+const bucket = import.meta.env.VITE_CONTENT_BUCKET_NAME;
 const region = import.meta.env.VITE_AWS_REGION;
 
 export const contentUrl = (key: string) =>

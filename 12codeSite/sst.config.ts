@@ -9,5 +9,14 @@ export default $config({
       home: "aws",
     };
   },
-  async run() {},
+  async run() {
+    const content = new sst.aws.Bucket("Content", {
+      access: "public",
+    });
+
+    return {
+      contentBucketName: content.name,
+      region: aws.getRegionOutput().name,
+    };
+  },
 });
