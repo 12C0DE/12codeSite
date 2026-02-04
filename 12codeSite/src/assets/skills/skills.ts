@@ -3,8 +3,11 @@ import { getYears } from "../../utils";
 export const skills = [
   {
     name: "Figma",
-    color: "#A259FF",
-    desc: "Design and prototyping tool",
+    color: "#E8E4DC",
+    accentColor: "#9B8B7E",
+    textColor: "#2B2520",
+    borderColor: "#D4CFC7",
+    desc: "Design and Prototyping tool",
     icon: "figma",
     experience: 3,
     use: "Moodboards, Design, Prototyping",
@@ -14,7 +17,9 @@ export const skills = [
   },
   {
     name: "AWS",
-    color: "#232F3E",
+   color: "#E8E0D5",
+    textColor: "#2B2520",
+    borderColor: "#C8BFB4",
     accentColor: "#FF9900",
     desc: "Cloud computing platform for building scalable, highly available serverless infrastructure",
     icon: "aws",
@@ -26,7 +31,9 @@ export const skills = [
   },
   {
     name: "Databases",
-    color: "#4479A1",
+    color: "#DCD4C8",
+    textColor: "#2B2520",
+    borderColor: "#BCB4A8",
     desc: "SQL and NoSQL database systems for structured and flexible data management",
     icon: "database",
     experience: 4,
@@ -37,7 +44,9 @@ export const skills = [
   },
   {
     name: ".NET",
-    color: "#512BD4",
+    color: "#C9BDB0",
+    textColor: "#1F1B18",
+    borderColor: "#A99D90",
     desc: "Microsoft framework for building cross-platform applications and web services",
     icon: "dotnet",
     experience: 3,
@@ -48,7 +57,9 @@ export const skills = [
   },
   {
     name: "Full-Stack JavaScript",
-    color: "#F7DF1E",
+   color: "#A89B8E",
+    textColor: "#1F1B18",
+    borderColor: "#887B6E",
     desc: "Primary programming languages for full-stack development",
     icon: "js",
     experience: 5,
@@ -59,7 +70,9 @@ export const skills = [
   },
   {
     name: "React",
-    color: "#61DBFB",
+     color: "#C4B5A0", // Warm beige
+    textColor: "#1F1B18",
+    borderColor: "#A49580",
     desc: "UI JavaScript library specializing in building reusable components for simple to complex interfaces",
     experience: 5,
     use: "UI, Web Development, Mobile app development",

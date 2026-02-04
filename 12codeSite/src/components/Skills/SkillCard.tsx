@@ -5,6 +5,8 @@ export const SkillCard = ({
   name,
   color,
   accentColor,
+  textColor,
+  borderColor,
   icon,
   experience,
   desc,
@@ -14,87 +16,71 @@ export const SkillCard = ({
   // close = () => {},
   isSelected,
   isMobile,
+  cardIndex,
 }: SkillBreakdownProps) => {
   return (
     <>
       <div
-        className="absolute inset-0 rounded-xl p-4 shadow-xl flex flex-col justify-between overflow-hidden md:h-auto"
+        className="absolute inset-0 p-4 shadow-lg flex flex-col justify-between overflow-hidden md:h-auto"
         style={{
           backgroundColor: color,
-          border: "3px solid #000",
+          border: borderColor,
           backfaceVisibility: "hidden",
           WebkitBackfaceVisibility: "hidden", //Safari
           transform: "rotateY(0deg)",
         }}
       >
-        <div
-          id="backgroundPattern"
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)`,
-          }}
-        />
-        <div id="content" className="relative z-10">
-          <div className="flex items-center justify-center mb-2">
+        <div className="flex items-start justify-between mb-auto">
+          <div className="space-y-1.5">
             <div
-              className="w-18 h-18 lg:w-32 lg:h-32 rounded-full flex items-center justify-center text-4xl lg:text-6xl"
+              className="text-[10px] uppercase tracking-[0.2em] font-medium leading-none"
               style={{
-                backgroundColor: "rgba(0, 0, 0, 0.2)",
-                color: color === "#FFFFFF" ? "#000" : "#fff",
+                color: textColor,
+                opacity: 0.5,
               }}
             >
-              {getIcon(icon)}
+              {type}
             </div>
-          </div>
-          <div className="flex gap-2 mb-4">
             <div
-              className="w-12 h-12 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-            />
-            <div
-              className="w-12 h-12 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
-            />
-            <div
-              className="w-12 h-12 rounded-lg"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
+              className="h-0.5 w-1/2 md:w-full"
+              style={{
+                backgroundColor: textColor,
+                opacity: 0.2,
+              }}
             />
           </div>
-          {!isMobile && (
-            <div className="space-y-1">
-              <div
-                className="h-2 w-32 rounded"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-              />
-              <div
-                className="h-2 w-24 rounded"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
-              />
-              <div
-                className="h-2 w-28 rounded"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}
-              />
-            </div>
-          )}
-        </div>
-        <div id="cardFooter" className="relative z-10">
-          <h3
-            className="text-xl lg:text-2xl mb-1"
+          {/* <div
+            className="text-[10px] font-mono tabular-nums"
             style={{
-              color: color === "#FFFFFF" ? "#000" : "#fff",
-              fontWeight: 600,
+              color: textColor,
+              opacity: 0.4,
             }}
+          >
+            {String((cardIndex ?? 0) + 1).padStart(2, "0")}
+          </div> */}
+        </div>
+        <div className="flex items-center justify-center mb-2">
+          <div
+            className="w-18 h-18 lg:w-24 lg:h-24 rounded-full flex items-center justify-center"
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.2)",
+              color: color === "#FFFFFF" ? "#000" : "#fff",
+            }}
+          >
+            {getIcon(icon)}
+          </div>
+        </div>
+        <div className="mb-auto mt-4 lg:mt-8 px-2 lg:px-4">
+          <h3
+            className="text-lg md:text-4xl leading-none mb-2 tracking-light font-hero"
+            style={{ color: textColor, fontWeight: 500 }}
           >
             {name}
           </h3>
-          <p
-            className="text-sm"
-            style={{
-              color: color === "#FFFFFF" ? "#666" : "rgba(255,255,255,0.8)",
-            }}
-          >
-            {type}
-          </p>
+          <div
+            className="h-0.5 w-full mb-3"
+            style={{ backgroundColor: textColor, opacity: 0.15 }}
+          />
         </div>
       </div>
       <div

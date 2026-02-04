@@ -2,6 +2,8 @@ export interface SkillBreakdownProps {
   name: string;
   color: string;
   accentColor?: string;
+  textColor?: string;
+  borderColor?: string;
   desc: string;
   icon: string;
   experience: number;
