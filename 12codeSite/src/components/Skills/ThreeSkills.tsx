@@ -126,14 +126,6 @@ export const ThreeSkills = () => {
                   {...skill}
                 />
               </motion.div>
-              {isHovered && !selectedCard && (
-                <motion.div
-                  className="absolute inset-0 border-4 rounded-2xl pointer-events-none"
-                  style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                />
-              )}
             </motion.div>
           );
         })}

@@ -1,6 +1,8 @@
 import { getIcon } from "../../utils";
 import type { SkillBreakdownProps } from "../../types";
 
+const grainTexture = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E`;
+
 export const SkillCard = ({
   name,
   color,
@@ -24,8 +26,9 @@ export const SkillCard = ({
         className="absolute inset-0 p-4 shadow-lg flex flex-col justify-between overflow-hidden md:h-auto"
         style={{
           backgroundColor: color,
-          border: borderColor,
+          border: `1px solid ${borderColor}`,
           backfaceVisibility: "hidden",
+          backgroundImage: `url("${grainTexture}")`,
           WebkitBackfaceVisibility: "hidden", //Safari
           transform: "rotateY(0deg)",
         }}
@@ -85,69 +88,78 @@ export const SkillCard = ({
       </div>
       <div
         id="backofCard"
-        className="absolute inset-0 rounded-xl p-3 shadow-xl flex flex-col justify-between lg:content-between overflow-hidden h-62 md:h-auto"
+        className="absolute inset-0 p-5 shadow-lg flex flex-col justify-between lg:content-between overflow-hidden"
         style={{
-          backgroundColor: "#1a1a1a",
-          border: "2px solid rgba(255, 255, 255, 0.1)",
+          backgroundColor: color,
+          border: `1px solid ${borderColor}`,
           backfaceVisibility: "hidden",
           WebkitBackfaceVisibility: "hidden", //Safari
           transform: "rotateY(180deg) translateZ(0)",
-          pointerEvents: isSelected ? "auto" : "none",
           WebkitFontSmoothing: "antialiased",
+          // pointerEvents: isSelected ? "auto" : "none",
+          backgroundImage: `url("${grainTexture}")`,
+          backgroundRepeat: 'repeat',
           fontSmooth: "always",
           textRendering: "optimizeLegibility",
         }}
       >
-        <div className="relative z-10">
-          <article className="mb-2">
-            <div
-              className="w-12 h-12 lg:w-20 lg:h-20 lg:mr-4 -ml-2 rounded-full flex items-center justify-center text-2xl lg:text-6xl float-left mr-1"
-              style={{ backgroundColor: color }}
-            >
-              {getIcon(icon)}
-            </div>
-            <h3 className="text-sm lg:text-xl text-white mb-1 md:font-bold">
-              {name}
-            </h3>
-            <p className="text-white/60 text-[8px] md:text-sm">{desc}</p>
-          </article>
-          <div className="space-y-3 lg:space-y-4">
-            <div>
-              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wider mb-1 md:mb-2 lg:mt-4">
-                Experience Level
-              </h4>
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((level) => (
-                  <div
-                    key={level}
-                    className="h-2 flex-1 rounded-full"
-                    style={{
-                      backgroundColor:
-                        experience >= level
-                          ? (accentColor ?? color)
-                          : "rgba(255, 255, 255, 0.1)",
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
+        <div className="relative z-10 text-black">
+          <div>
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="text-sm mb-1 leading-tight tracking-tight font-medium">
+                            {name}
+                          </h3>
+                          <p className="text-[9px] uppercase tracking-[0.15em]">
+                            {type}
+                          </p>
+                        </div>
+                        <div className="text-[10px] font-mono tabular-nums">
+                          {String((cardIndex ?? 0) + 1).padStart(2, "0")}
+                        </div>
+                      </div>
+                      <div className="h-[1px] w-full bg-white/10 mb-4" />
+                      <div id="details" className="space-y-3">
+                        <div>
+                          <h4 className=" text-[9px] uppercase tracking-[0.15em] mb-1.5 font-medium">
+                            Description
+                          </h4>
+                          <p className="text-[11px] leading-relaxed">
+                            {desc}
+                          </p>
+                        </div>
 
-            <div>
-              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wider mb-1 md:mb-2">
-                Primary Use
-              </h4>
-              <p className="text-white/80 text-[10px] md:text-sm">{use}</p>
-            </div>
+                        <div>
+                          <h4 className="text-[9px] uppercase tracking-[0.15em] mb-1.5 font-medium">
+                            Proficiency
+                          </h4>
+                          <div className="flex gap-1">
+                            {[1, 2, 3, 4, 5].map((level) => (
+                              <div
+                                key={level}
+                                className="h-1 flex-1"
+                                style={{
+                                  backgroundColor:
+                                    level <= 4
+                                      ? textColor
+                                      : "rgba(255, 255, 255, 0.2)",
+                                }}
+                              />
+                            ))}
+                          </div>
+                        </div>
 
-            <div>
-              <h4 className="text-white/40 text-[10px] md:text-sm uppercase tracking-wide mb-1 md:mb-2">
-                Years Using
-              </h4>
-              <p className="text-white/80 text-sm">
-                <b>{years}</b>
-              </p>
-            </div>
-          </div>
+                        <div>
+                          <h4 className="text-[9px] uppercase tracking-[0.15em] mb-1.5 font-medium">
+                            Applications
+                          </h4>
+                          <p className="text-[11px] leading-relaxed">
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
         </div>
       </div>
     </>
