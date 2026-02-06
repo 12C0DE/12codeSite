@@ -4,7 +4,7 @@ export const skills = [
   {
     name: "Figma",
     color: "#E8E4DC",
-    accentColor: "#9B8B7E",
+    accentColor: "#56514d",
     textColor: "#2B2520",
     borderColor: "#D4CFC7",
     desc: "Design and Prototyping tool",
@@ -17,7 +17,7 @@ export const skills = [
   },
   {
     name: "AWS",
-   color: "#E8E0D5",
+    color: "#E8E0D5",
     textColor: "#2B2520",
     borderColor: "#C8BFB4",
     accentColor: "#FF9900",
@@ -57,7 +57,7 @@ export const skills = [
   },
   {
     name: "Full-Stack JavaScript",
-   color: "#A89B8E",
+    color: "#A89B8E",
     textColor: "#1F1B18",
     borderColor: "#887B6E",
     desc: "Primary programming languages for full-stack development",
@@ -70,14 +70,14 @@ export const skills = [
   },
   {
     name: "React",
-     color: "#C4B5A0", // Warm beige
+    color: "#C4B5A0",
     textColor: "#1F1B18",
     borderColor: "#A49580",
     desc: "UI JavaScript library specializing in building reusable components for simple to complex interfaces",
     experience: 5,
     use: "UI, Web Development, Mobile app development",
     years: getYears(2019),
-    type: "Software",
+    type: "Library",
     icon: "react",
     cardIndex: 5,
   },
