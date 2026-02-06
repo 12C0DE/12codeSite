@@ -34,7 +34,7 @@ export const ThreeSkills = () => {
                 }}
                 initial={false}
                 animate={{
-                  scale: isSelected ? 1.45 : 1,
+                  scale: isSelected ? 1.5 : 1,
                   x: isSelected ? (index % 2 == 0 ? 50 : -25) : 0,
                 }}
                 transition={{
@@ -66,9 +66,7 @@ export const ThreeSkills = () => {
         </div>
         {selectedCard === null && (
           <div className="text-center px-4 mt-8">
-            <p className="text-white/40 text-sm">
-              Tap to view details
-            </p>
+            <p className="text-white/40 text-sm">Tap to view details</p>
           </div>
         )}
       </div>

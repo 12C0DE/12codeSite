@@ -5,14 +5,14 @@ import { useActiveSection } from "../../hooks/useActiveSection";
 
 export const ContactIconsGroup = () => {
   const activeSection = useActiveSection();
-  
+
   // Hide when on the contact section
   if (activeSection === "contact") {
     return null;
   }
 
   return (
-    <div className="flex flex-col gap-2 fixed bottom-10 right-0 bg-black/10 backdrop-blur-sm p-2 rounded-full xl:gap-4 xl:right-4 xl:bg-transparent z-200">
+    <div className="flex flex-col gap-4 fixed bottom-10 right-0 bg-black/10 backdrop-blur-sm p-2 rounded-full xl:right-4 xl:bg-transparent z-200">
       <a
         href="mailto:12codeHz@gmail.com"
         data-tooltip-id="emailTip"
@@ -34,7 +34,7 @@ export const ContactIconsGroup = () => {
         target="_blank"
         data-tooltip-id="ghTip"
       >
-        <GithubLogo className="size-6 xl:size-8"/>
+        <GithubLogo className="size-6 xl:size-8" />
       </a>
       <Tooltip
         id="emailTip"

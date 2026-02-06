@@ -16,7 +16,7 @@ export const SkillCard = ({
   cardIndex,
 }: SkillBreakdownProps) => {
   const sectionTitleClasses =
-    "text-[8px] md:text-[10px] uppercase tracking-[0.15em] mb-1 font-medium text-[#56514d]";
+    "text-[8px] md:text-[10px] uppercase tracking-[0.15em] md:mb-1 font-medium text-[#56514d]";
 
   return (
     <>
@@ -111,7 +111,7 @@ export const SkillCard = ({
               </div>
             </div>
             <div className="h-[1px] w-full bg-[#8B7E9B] mb-2 md:mb-4" />
-            <div id="details" className="space-y-6">
+            <div id="details" className="space-y-3 md:space-y-6">
               <div>
                 <h4 className={sectionTitleClasses}>Description</h4>
                 <p className="text-[8px] md:text-[12px] leading-relaxed">

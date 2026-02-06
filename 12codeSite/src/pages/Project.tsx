@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import { useProject } from "../context/useProject";
-import {
-  // ImageWithFallback,
-  PageContainer,
-  ProjectBadge,
-  ProjectMeta,
-} from "../components";
+import { PageContainer, ProjectBadge, ProjectMeta } from "../components";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, ExternalLink, Users } from "lucide-react";
 
