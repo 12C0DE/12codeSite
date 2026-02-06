@@ -3,7 +3,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { Database } from "lucide-react";
 
 export const getIcon = (icon: string): React.JSX.Element | null => {
-  const classes = "size-[40px] p-1 md:size-[64px]";
+  const classes = "size-[40px] p-1 md:size-[72px]";
 
   switch (icon) {
     case "aws":

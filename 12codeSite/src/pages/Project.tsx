@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import { useProject } from "../context/useProject";
-import {
-  // ImageWithFallback,
-  PageContainer,
-  ProjectBadge,
-  ProjectMeta,
-} from "../components";
+import { PageContainer, ProjectBadge, ProjectMeta } from "../components";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, ExternalLink, Users } from "lucide-react";
 
@@ -101,10 +96,6 @@ export const Project = () => {
                     className={`${idx % 2 === 1 ? "md:order-2" : "md:order-1"}`}
                   >
                     <div className="relative overflow-hidden rounded-sm aspect-4/3 bg-zinc-900">
-                      {/* <ImageWithFallback
-                        src={img.url}
-                        alt={`${selectedProject.title}_${idx}`}
-                      /> */}
                       <img
                         src={img.url}
                         alt={`${selectedProject.title}_${idx}`}
@@ -115,9 +106,8 @@ export const Project = () => {
                   </div>
 
                   <div
-                    className={`flex flex-col justify-center ${idx % 2 === 1 ? "md:order-1 justify-self-end" : "md:order-2"}`}
+                    className={`flex flex-col justify-center ${idx % 2 === 1 ? "md:order-1 md:justify-self-end" : "md:order-2"}`}
                   >
-                    {/* <div className="space-y-3 md:space-y-4"> */}
                     <p className="text-sm md:text-base text-white/60 leading-relaxed">
                       {img.caption}
                     </p>
