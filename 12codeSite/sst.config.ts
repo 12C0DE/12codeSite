@@ -14,8 +14,30 @@ export default $config({
       access: "public",
     });
 
+    const projects = new StyleSheet.aws.Dynamo("Projects", {
+      fields: {id: "string"},
+      primaryIndex: { hashKey: "id"},
+    });
+
+    const api = new StyleSheet.aws.Function("ProjectsApi", {
+      handler: "12codeSite/src/api/projects.handler",
+      uri: {
+        cors: {
+          allowOrigins: ["*"],
+          allowMethods: ["GET", "OPTIONS"],
+          allowHeaders: ["content-type"],
+        }
+      },
+      environment: {
+        PROJECTS_TABLE: projects.name
+      },
+      link: [projects]
+    });
+
     return {
       contentBucketName: content.name,
+      projectsTableName: projects.name,
+      projectsApiUrl: api.url,
       region: aws.getRegionOutput().name,
     };
   },
