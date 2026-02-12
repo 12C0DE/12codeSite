@@ -1,5 +1,6 @@
 export interface ProjectImage {
-  key: string;
+  key?: string;
+  url?: string;
   caption?: string;
 }
 
@@ -14,7 +15,8 @@ export interface ProjectData {
   team: string[];
   timeline: string;
   links: { label: string; url: string }[];
-  mainImageKey: string;
+  mainImageKey?: string;
+  mainImage?: string;
   images: ProjectImage[];
   challenges: string;
   solution: string;

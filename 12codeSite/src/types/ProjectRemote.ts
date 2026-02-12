@@ -13,8 +13,8 @@ export type ProjectRemote = {
   team: string[];
   timeline: string;
   links: ProjectLink[];
-  mainImageKey: string; // <-- string key to S3 object
-  images: { key: string; caption?: string }[];
+  mainImageKey: string;
+  images: { key?: string; url?: string; caption?: string }[];
   challenges: string;
   solution: string;
   impact: string;
