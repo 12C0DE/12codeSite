@@ -1,4 +1,4 @@
-import type { ProjectData } from "../../../types/ProjectData";
+import type { ProjectData } from "../../types/ProjectData";
 import omexLogo from "./omex_logo.png";
 import CC_Logo from "./CC_img.png";
 import omexFigma1 from "./Omex_figma1.png";
