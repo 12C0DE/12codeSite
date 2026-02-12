@@ -20,11 +20,11 @@ export default $config({
     });
 
     const api = new sst.aws.Function("ProjectsApi", {
-      handler: "12codeSite/src/api/projects.handler",
+      handler: "src/api/projects.handler",
       url: {
         cors: {
           allowOrigins: ["*"],
-          allowMethods: ["GET", "OPTIONS"],
+          // allowMethods: ["GET", "OPTIONS"],
           allowHeaders: ["content-type"],
         },
       },

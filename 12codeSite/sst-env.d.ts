@@ -10,6 +10,15 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Bucket"
     }
+    "Projects": {
+      "name": string
+      "type": "sst.aws.Dynamo"
+    }
+    "ProjectsApi": {
+      "name": string
+      "type": "sst.aws.Function"
+      "url": string
+    }
   }
 }
 /// <reference path="sst-env.d.ts" />
