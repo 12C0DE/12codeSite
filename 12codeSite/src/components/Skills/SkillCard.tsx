@@ -53,7 +53,7 @@ export const SkillCard = ({
         </div>
         <div className="flex items-center justify-center mb-2">
           <div
-            className="w-18 h-18 lg:w-32 lg:h-32 rounded-full flex items-center justify-center"
+            className="w-18 h-18 sm:w-32 sm:h-32 rounded-full flex items-center justify-center"
             style={{
               backgroundColor: "rgba(0, 0, 0, 0.2)",
               color: color === "#FFFFFF" ? "#000" : "#fff",
@@ -63,9 +63,9 @@ export const SkillCard = ({
             {getIcon(icon)}
           </div>
         </div>
-        <div className="mb-auto mt-4 lg:mt-8 md:px-2 lg:px-4">
+        <div className="mb-auto mt-4 lg:mt-8 sm:px-2 lg:px-4">
           <h3
-            className="text-lg md:text-4xl leading-none mb-2 md:mb-4 tracking-light font-bold md:font-medium font-hero"
+            className="text-lg sm:text-4xl leading-none mb-2 md:mb-4 tracking-light font-bold md:font-medium font-hero"
             style={{ color: textColor }}
           >
             {name}
@@ -99,7 +99,7 @@ export const SkillCard = ({
               className="flex items-start justify-between mb-1 md:mb-4"
             >
               <div>
-                <h3 className="text-sm md:text-lg mb-1 leading-tight tracking-tight font-bold">
+                <h3 className="text-sm md:text-md lg:text-lg mb-1 leading-tight tracking-tight font-semibold md:font-bold">
                   {name}
                 </h3>
                 <p className="text-[6px] md:text-[8px] text-[#56514d] uppercase tracking-[0.15em]">

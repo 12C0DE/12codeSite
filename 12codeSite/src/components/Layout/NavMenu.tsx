@@ -43,7 +43,7 @@ export const NavMenu = ({ isVisible }: NavMenuProps) => {
   const handleMobileNavClick = () => {
     setTimeout(() => {
       setIsMobileMenuOpen(!isMobileMenuOpen);
-    }, 650);
+    }, 500);
   };
 
   if (!isVisible) return null;

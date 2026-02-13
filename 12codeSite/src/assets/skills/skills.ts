@@ -60,7 +60,7 @@ export const skills = [
     color: "#A89B8E",
     textColor: "#1F1B18",
     borderColor: "#887B6E",
-    desc: "Primary programming languages for full-stack development",
+    desc: "My primary language for full-stack development",
     icon: "js",
     experience: 5,
     use: "Frontend, Backend (Node.js), APIs, TypeScript",
