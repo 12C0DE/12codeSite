@@ -19,10 +19,6 @@ export const Projects = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) {
-    return <Spinner />;
-  }
-
   return (
     <section id="projects" className="px-4 py-32">
       <div className="max-w-6xl mx-auto">
@@ -31,7 +27,9 @@ export const Projects = () => {
           <Heading text="Featured Projects" />
         </div>
         <div className="grid md:grid-cols-2 gap-16">
-          {error ? (
+          {loading ? (
+            <Spinner />
+          ) : error ? (
             <div className="text-red-500">Error: {error}</div>
           ) : (
             projects.map((project) => (
