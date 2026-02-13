@@ -22,6 +22,7 @@ const requiredProjectFields: (keyof ProjectRemote)[] = [
   "challenges",
   "solution",
   "impact",
+  "order",
 ];
 
 function isProjectRemote(value: unknown): value is ProjectRemote {
@@ -67,7 +68,7 @@ export const handler: APIGatewayProxyHandlerV2 = async () => {
     exclusiveStartKey = response.LastEvaluatedKey;
   } while (exclusiveStartKey);
 
-  projects.sort((a, b) => a.title.localeCompare(b.title));
+  projects.sort((a, b) => a.order - b.order);
 
   return {
     statusCode: 200,

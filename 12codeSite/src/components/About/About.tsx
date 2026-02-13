@@ -30,7 +30,7 @@ export const About = () => {
               <p>Let me think...</p>
             </div>
           </div>
-          <div className="space-y-18 lg:pt-32">
+          <div className="space-y-18">
             <div>
               <h3 className="text-2xl text-white mb-8 tracking-tight mt-3">
                 Experience

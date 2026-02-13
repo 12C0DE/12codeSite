@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import type { ProjectResolved } from "../../types";
 import { getProjects } from "../../data/projects";
 import { Heading, PageTitle, ProjectCard, Spinner } from "../index";
-// import { projects } from "../../assets/projects/data/projects";
 
 export const Projects = () => {
   const [projects, setProjects] = useState<ProjectResolved[]>([]);

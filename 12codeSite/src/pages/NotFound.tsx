@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export const NotFound = () => {
   const navigate = useNavigate();
@@ -9,12 +10,15 @@ export const NotFound = () => {
         <h1 className="text-2xl font-medium">404 - Page Not Found</h1>
       </div>
       <div>
-        <input
-          type="button"
-          value="Go Back"
+        <button
           onClick={() => navigate("/")}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
-        />
+          className="group flex items-center gap-3 text-white/70 hover:text-white transition-colors my-16 ml-4"
+        >
+          <div className="size-10 border border-white/30 rounded-full flex items-center justify-center group-hover:border-white group-hover:bg-white/10 transition-all">
+            <ArrowLeft className="size-5" />
+          </div>
+          <span className="text-sm uppercase tracking-[0.2em]">Home</span>
+        </button>
       </div>
     </div>
   );

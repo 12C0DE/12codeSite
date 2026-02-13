@@ -5,70 +5,69 @@ import { Tooltip } from "react-tooltip";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="px-4 py-32">
+    <section id="contact" className="px-4 pt-32 min-h-screen">
       <div className="max-w-6xl">
         <PageTitle title="Get in Touch" />
         <Heading text="Let's Create Together" />
-        <div className="grid md:grid-cols-2 gap-20 items-start">
-          <div>
-            <p className="text-xl text-white/60 leading-relaxed mb-12">
-              Have a project in mind? I'd love to hear about it.
-              <br />
-              Reach out and let's build something.
-            </p>
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-4 md:space-y-8">
+            <div>
+              <p className="text-xl text-white/60 leading-relaxed">
+                Have a project in mind? I'd love to hear about it.
+                <br />
+                Reach out and let's build something.
+              </p>
+            </div>
             <div>
               <a
                 href="mailto:12codeHz@gmail.com"
                 target="_blank"
                 data-tooltip-id="emailTip"
-                className="group inline-flex items-center gap-4 text-2xl text-white hover:text-white/70 transition-colors mb-16"
+                className="group inline-flex items-center gap-4 text-2xl text-white hover:text-white/70 transition-colors"
               >
                 <span>12codeHz@gmail.com</span>
-                <div className="size-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-white group-hover:rotate-45 transition-all duration-300">
+                <span className="size-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-white group-hover:rotate-45 transition-all duration-300">
                   <ArrowUpRight className="size-6 rotate-45 md:rotate-0" />
-                </div>
+                </span>
               </a>
-
-              <div className="flex gap-8">
-                <a
-                  href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
-                  target="_blank"
-                  className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white "
-                  data-tooltip-id="linkedInTip"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="size-8 hover:text-(--linkedIn-color) transition-colors" />
-                </a>
-                <a
-                  href="https://github.com/12C0DE"
-                  target="_blank"
-                  className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white"
-                  data-tooltip-id="ghTip"
-                  aria-label="Github"
-                >
-                  <GithubLogo className="size-8" />
-                </a>
-                <Tooltip
-                  id="emailTip"
-                  place="left"
-                  content="mailto:"
-                  className="invisible xl:visible"
-                />
-                <Tooltip
-                  id="ghTip"
-                  place="right"
-                  content="View GitHub Profile"
-                />
-                <Tooltip
-                  id="linkedInTip"
-                  place="left"
-                  content="View LinkedIn Profile"
-                />
-              </div>
+            </div>
+            <div className="flex gap-8">
+              <a
+                href="https://www.linkedin.com/in/ruben-hernandez-7a7b5128a/"
+                target="_blank"
+                rel="noopener"
+                className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white "
+                data-tooltip-id="linkedInTip"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="size-8 hover:text-(--linkedIn-color) transition-colors" />
+              </a>
+              <a
+                href="https://github.com/12C0DE"
+                target="_blank"
+                rel="noopener"
+                className="size-14 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:scale-110 transition-all duration-300 text-white"
+                data-tooltip-id="ghTip"
+                aria-label="Github"
+              >
+                <GithubLogo className="size-8" />
+              </a>
+              <Tooltip
+                id="emailTip"
+                place="left"
+                content="mailto:"
+                className="invisible xl:visible"
+              />
+              <Tooltip id="ghTip" place="right" content="View GitHub Profile" />
+              <Tooltip
+                id="linkedInTip"
+                place="left"
+                content="View LinkedIn Profile"
+              />
             </div>
           </div>
           <div>
-            <div className="space-y-8 justify-start">
+            <div className="space-y-4 md:space-y-8 justify-start">
               <div>
                 <h3 className="text-sm text-white/50 uppercase tracking-wider mb-3">
                   Location

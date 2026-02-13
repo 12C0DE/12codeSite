@@ -19,6 +19,7 @@ export type ProjectRemote = {
   solution: string;
   impact: string;
   url?: string;
+  order: number;
 };
 
 export type ProjectResolved = ProjectData & {
