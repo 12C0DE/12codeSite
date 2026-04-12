@@ -14,6 +14,7 @@
   "dependencies": {
     "@react-three/fiber": "^9.5.0",
     "@tailwindcss/vite": "^4.1.18",
+    "aws-sdk": "^2.1693.0",
     "lucide-react": "^0.562.0",
     "motion": "^12.26.2",
     "react": "^19.2.0",
