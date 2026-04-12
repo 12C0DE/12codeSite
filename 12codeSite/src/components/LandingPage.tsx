@@ -51,8 +51,8 @@ export const LandingPage = () => {
         {/* END of SE -> Des */}
         <div className="flex flex-row gap-1 items-baseline mb-8">
           <h2 className="text-4xl text-white">Hey, I'm </h2>
-          <h2 className="text-4xl md:text-6xl -tracking-4">12</h2>
-          <h2 className="text-4xl text-white ml-1 md:ml-2">uben.</h2>
+          {/* <h2 className="text-4xl md:text-6xl -tracking-4">12</h2> */}
+          <h2 className="text-4xl text-white ml-1 md:ml-2">Ruben.</h2>
         </div>
         <div className="flex flex-row gap-8 items-end md:items-baseline">
           <p className="text-2xl text-white/60 leading-relaxed mb-8">
