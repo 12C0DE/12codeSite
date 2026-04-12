@@ -27,7 +27,8 @@ export const About = () => {
             </div>
             <Heading text="My Life" />
             <div className="space-y-6 text-lg text-white/60 leading-relaxed">
-              <p>Let me think...</p>
+              <p>When I was a kid, every birthday wish was the same — a computer. That love for tech is still with me today, even through the late nights stuck debugging.</p>
+              <p>I have a wonderful wife and 2 daughters who keep life full and fun. My daughters share my enthusiasm for all things technology, they like pulling out their ‘laptop’ when I have mine out. I don’t always need a computer, though. I enjoy building things with my hands, being outdoors, and I recently started fishing!</p>
             </div>
           </div>
           <div className="space-y-18">
@@ -37,9 +38,15 @@ export const About = () => {
               </h3>
               <div className="space-y-8">
                 <ExperienceBlock
+                  role="Software Engineer"
+                  company="weavix"
+                  timeline="3/2026 - Present"
+                  link="https://weavix.com/"
+                />
+                <ExperienceBlock
                   role="I.T. Product Analyst"
                   company="Flint Hills Resources"
-                  timeline="2/2025 - Present"
+                  timeline="2/2025 - 3/2026"
                   link="https://www.fhr.com/"
                 />
                 <ExperienceBlock
@@ -60,7 +67,7 @@ export const About = () => {
                   timeline="9/2018 - 9/2021"
                   link="https://www.abbott.com/en-us/homepage"
                 />
-                <ExperienceBlock
+                {/* <ExperienceBlock
                   role="Software Developer"
                   company="Design Resources, Inc."
                   timeline="9/2017 - 9/2018"
@@ -71,7 +78,7 @@ export const About = () => {
                   company="Airbus Americas"
                   timeline="9/2013 - 9/2017"
                   link="https://www.airbus.com/en"
-                />
+                /> */}
               </div>
             </div>
           </div>
